@@ -1,0 +1,15 @@
+/*RESET
+del <body, article, div, br>
+*/
+
+div {
+background-color:rgb(255, 255, 0);
+font-size: 30px;
+color: red;
+border-style: solid;
+width: 200px;
+border-color: black;
+border-width: 5px;
+padding: 20px;
+margin: 10px;
+}
