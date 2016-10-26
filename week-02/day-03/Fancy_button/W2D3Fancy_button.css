@@ -49,47 +49,27 @@ a {
   border-color: rgb(91, 129, 21);
 }
 .button1:hover{
-  background-color: pink;
-  background: -moz-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  background: -webkit-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  background: linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
+  background-color: grey;
+  background: -moz-linear-gradient(bottom, #FAF7F7 0%, #EAE6E6);
+  background: -webkit-linear-gradient(bottom, #FAF7F7 0%, #EAE6E6);
+  background: linear-gradient(bottom, #FAF7F7 0%, #EAE6E6);
   opacity: .5
 }
 .button2:hover{
   background-color: blue;
-  background: -moz-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  background: -webkit-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  background: linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  opacity: .5;
-  font-size: 35px;
+  background: -moz-linear-gradient(bottom, rgba(22, 145, 180 .8) 0%, rgb(22, 145, 180) 100%);
+  background: -webkit-linear-gradient(bottom, rgba(22, 145, 180 .8) 0%, rgb(22, 145, 180) 100%);
+  background: linear-gradient(bottom, rgba(22, 145, 180 .8) 0%, rgb(22, 145, 180) 100%);
+  font-size: 31px;
+  padding-top: 7px;
 }
 .button3:hover{
-  background-color: darkgreen;
+  background-color: yellow;
   background: -moz-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
   background: -webkit-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
   background: linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  opacity: .5
-}
-.button1:visited{
-  background-color: pink;
-  background: -moz-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  background: -webkit-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  background: linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  opacity: .5
-}
-.button2:visited{
-  background-color: blue;
-  background: -moz-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  background: -webkit-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  background: linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  opacity: .5;
-  font-size: 35px;
-}
-.button3:visited{
-  background-color: darkgreen;
-  background: -moz-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  background: -webkit-linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  background: linear-gradient(bottom, #FCF9F9 0%, yellow 100%);
-  /*opacity: .3;*/
-  border-collapse: collapse;
+  box-shadow: 1px 1px 2px 2px yellow;
+  text-shadow: 1px 1px 1px yellow;
+  border-color: yellow;
+  color: rgb(91, 129, 21);
 }
