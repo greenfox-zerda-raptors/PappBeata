@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: Georgia sans;
+  color: rgb(19, 58, 38);
+  }
+main {
+  margin: 10px auto;
+  width:  50%;
+  padding-bottom: 20px;
+    }
+.bgimg {
+   z-index: -1;
+   background-image: url("improvement.jpg");
+   background-repeat:no-repeat;
+   background-size: cover;
+   height: 100%;
+   background-position: left center;
+   overflow: hidden;
+   opacity: 0.8;
+   margin: 0 auto;
+  }
+h1 {
+  padding: 20px;
+  text-align: right;
+  font-size: 60px;
+  text-shadow: 2px 2px #8bdab1;
+  }
+h2 {
+  padding: 20px;
+  font-size: 50px;
+  padding-top: 250px;
+  text-shadow: 2px 2px #8bdab1;
+  }
+h3 {
+  font-size: 30px;
+  }
+.vline  {
+  border-top: thick solid;
+  padding-top: 25px;
+  }
+h4 {
+  margin-bottom: 0;
+  }
+h5 {
+  margin-top: 3px;
+  font-style: italic;
+  font-family: Times new roman;
+  font-size: 17px;
+  }
+blockquote.qstyle {
+  font: 14px;
+  margin-top: 0 -50px auto -50;
+  padding-top: 18px 10px 18px 50px;
+  background-color: #dadada;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-image: url(openquote4.gif);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  }

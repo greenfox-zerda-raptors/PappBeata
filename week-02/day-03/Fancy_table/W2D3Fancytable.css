@@ -1,0 +1,89 @@
+body {
+  margin:0 auto;
+  width: 60%;
+  font-family: Arial;
+  background-color: rgb(211,209, 203);
+  font-size: 12px;
+}
+h1 {
+  font-size: 30px;
+  color: #696969;
+}
+h2 {
+  background-color: #A69A69;
+  font-size: 20px;
+}
+label {
+    display: inline-block;
+    /*width: 350px;*/
+    text-align: left;
+    padding: 5px;
+    font-size: 12px;
+}
+input[type="text"] {
+  width: 100%;
+  font-size: 11px;
+}
+.titles {
+  background-color: #A69A69;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.leftblock, .rightblock {
+    min-width: 300px;
+    /*width: 300px;*/
+}
+.year {
+  width: 170px;
+}
+.nev-input {
+  width: 100%;
+}
+.savebtn {
+  background-color: blue;
+}
+.gender {
+  font-size: 12px;
+}
+.gender label {
+  text-align: left;
+  width: auto;
+}
+p {
+  margin-bottom: 0;
+}
+.fileupload {
+border: 1px solid #ccc;
+display: inline-block;
+padding: 6px 12px;
+cursor: pointer;
+}
+input[type="file"] {
+    display: none;
+}
+.radio {
+  width: 10px;
+}
+.checkb1, .checkb2{
+  font-size: 12px;
+  /*display: flex;
+  flex-direction: row;;*/
+  float: left;
+  width: 50%;
+}
+.note {
+  font-size: 11px;
+  opacity: .6;
+  clear: both;
+  padding: 5px;
+}
+.textblock, .buttonblock, .fileblock {
+  margin-top: 20px;
+}
+.red {
+  color: red;
+}

@@ -1,0 +1,89 @@
+  <html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="W2D2Form.css">
+  </head>
+
+  <body>
+
+  <form action="/Form" method="post">
+
+  <h1> Profil <h1>
+
+    <div class="flex-container" style="justify-content: space-between">
+      <div class="leftblock">
+        <h2>Szemelyes adatok
+        </h2>
+          <label for="nev">Nev<span class="red">*</span></label>
+          <input type="text" id="nev" name="user_name" class="nev-input" />
+        <div class="flex-container">
+          <div class="year">
+            <label for="yr">Szuletesi eved</label><br>
+            <input type="date" id="yr" name="user_year">
+          </div>
+          <div class="gender">
+              <label>Nemed</label><br>
+                <input type="radio" id=no name="gender" value="female" class="radio">
+                <label for="no">No</label>
+                <input type="radio" id=ferfi name="gender" value="male" class="radio">
+                <label for="ferfi">Ferfi</label>
+            </div>
+        </div>
+
+        <label for="favorites">Milyen markakat szeretsz?</label>
+        <div class="favorites">
+            <div class="checkb1">
+            <input type="checkbox" id="cbox1" value="Adidas">Adidas<br>
+            <input type="checkbox" id="cbox2" value="Apple">Apple<br>
+            <input type="checkbox" id="cbox3" value="Coca-Cola">Coca-Cola<br>
+            <input type="checkbox" id="cbox4" value="Mazda">Mazda<br>
+            <input type="checkbox" id="cbox5" value="Nike">Nike<br>
+          </div>
+          <div class="checkb2">
+            <input type="checkbox" id="cbox7" value="Opel">Opel<br>
+            <input type="checkbox" id="cbox6" value="Ray-Ban">Ray-Ban<br>
+            <input type="checkbox" id="cbox8" value="Starbucks">Starbucks<br>
+            <input type="checkbox" id="cbox9" value="Tesla">Tesla<br>
+            <input type="checkbox" id="cbox10" value="Yahoo">Yahoo<br>
+          </div>
+          <div class="note">Tobbet is valaszthatsz!</div>
+        </div>
+      </div>
+
+
+      <div class="rightblock">
+        <h2>Kapcsolat</h2>
+          <label for="telszam">Telefonszam*</label><br>
+          <input type="text" id="phone" name="user_phone" /><br>
+          <label for="telszam">E-mail cim*</label><br>
+          <input type="text" id="email" name="user_email" /><br>
+          <label for="telszam">Facebook profilod</label><br>
+          <input type="text" id="facebook" name="user_faceook" /><br>
+          <label for="telszam">Twitter profilod</label><br>
+          <input type="text" id="twitter" name="user_twitter" /><br>
+          <label for="telszam">Milyen hazban laksz?</label><br>
+          <input type="text" id="house" name="user_house" /><br>
+      </div>
+    </div>
+
+    <div class="textblock">
+      <label for="msg">Bemutatkozas*</label>
+      <textarea id="msg" name="user_message" rows="20" style="width:100%"></textarea>
+    </div>
+
+    <div class="fileblock">
+      <p>CV feltoltese </p>
+      <label for="fileblock" class="fileupload">FILE KIVÁLASZTÁSA</label>
+      <input id="fileblock" type="file"/>
+      <input type="file" class="hidden"><input/>
+    </div>
+
+    <div class="buttonblock">
+          <button type="submit">Mentes</button class="savebtn">
+          <button type="reset">Urlap torlese</button>
+    </div>
+
+  </form>
+
+  </body>
+  </html>

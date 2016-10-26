@@ -1,0 +1,21 @@
+body {
+  width: 350px;
+  }
+.Float-left {
+  float: left;
+    padding: 16px;
+    padding-left: 0;
+}
+.Float-right {
+float: right;
+padding: 16px;
+    padding-top: 50px;
+    }
+.inline-box {
+  border-bottom: thick solid #000000;
+  padding: 15px;
+  }
+p {
+  text-align: justify;
+
+}

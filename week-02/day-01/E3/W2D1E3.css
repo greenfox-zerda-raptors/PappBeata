@@ -1,0 +1,41 @@
+body {
+width: 100%;
+  }
+header {
+  background-color: #00FFFF;
+  height: 100px;
+  }
+main {
+  height: 320px;
+  background-color: red;
+  height: 100%;
+  margin: 0 10px;
+  position: relative;
+  flex-grow: 1;
+}
+.orange-box {
+  background-color: #ff8000;
+  height: 100%;
+  width: 100px;
+}
+.lila-box {
+  background-color: #551A8B;
+  height: 100%;
+  width: 100px;
+  }
+footer {
+  background-color: blue;
+  height: 100px;
+  }
+.black-box {
+  background-color: black;
+  right: 20px;
+  bottom: 20px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}

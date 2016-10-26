@@ -1,0 +1,43 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+header {
+  background-color: #00FFFF;
+  height: 100px;
+  }
+main {
+  height: 320px;
+  background-color: red;
+  height: 100%;
+  float: left;
+  width: 580px;
+  margin: 0 10px;
+  position: relative;
+}
+.orange-box {
+  background-color: #ff8000;
+  height: 100%;
+  width: 100px;
+  float: left;
+}
+.lila-box {
+  background-color: #551A8B;
+  height: 100%;
+  width: 100px;
+  float: left;
+}
+footer {
+  background-color: blue;
+  height: 100px;
+  width: 800px;
+  clear: both;
+}
+.black-box {
+  background-color: black;
+  right: 20px;
+  bottom: 20px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
