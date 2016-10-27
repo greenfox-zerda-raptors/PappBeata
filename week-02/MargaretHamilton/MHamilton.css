@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Georgia sans-serif;
+  }
+.flexcontainer {
+  display: flex;
+  flex-direction: row;
+}
+.sidenav {
+  min-width: 12em;
+  font-family: Georgia sans;
+  font-size: 14px;
+  background-color: rgb(246, 246, 246);
+  /*display: flex;*/
+}
+.sidenav a {
+  padding-left: 15px;
+}
+a {
+  color: rgb(6, 69, 173);
+  text-decoration: none;
+  opacity: 1;
+}
+.navbord {
+  border-bottom: solid grey thin;
+  padding-bottom: 3px;
+}
+nav ul {
+  list-style-type: none;
+  padding-left: 5px;
+  color: black;
+  opacity: 1;
+}
+main {
+  font-family: sans-serif;
+  line-height: 22px;
+}
+.images {
+  float: right;
+  border: none;
+  width: 220px;
+  padding-left: 5px;
+}
+/*.images img {
+  cursor: pointer;
+}*/
+.imgbox {
+  padding: 20px;
+  border: grey 1px;
+  background-color: rgb(246, 246, 246);
+}
+.img {
+  width: 180px;
+  height: 227px;
+}
+.empty{
+  margin-top:50px;
+  /*??? Ez rossz otlet?*/
+}
+#imgtit {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  /*hogyan teszem ezeket shorthandbe???*/
+}
+article {
+  padding-left: 5px;
+}
+h1 {
+    font-family: "Linux Libertine",Georgia,Times,serif;
+    font-size: 1.8em;
+    font-weight: normal;
+    border-bottom: solid 1px;
+    margin-bottom: 5px;
+    padding-bottom: 8px;
+  }
+h2 {
+  font-family: sans-serif;
+  }
+p {
+  font-size: 90%;
+  margin-top: 0;
+}
+#redirect {
+  font-style: italic;
+  padding-left: 24px;
+  margin-bottom: 7px;
+}
