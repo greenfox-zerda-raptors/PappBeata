@@ -27,6 +27,7 @@ td {
   border-style: solid;
   border-width: 1px;
   border-color: rgb(193, 195, 208);
+  text-shadow: 1px 1px 1px rgba(193, 195, 208, .6);
 }
 tr :first-child {
   border-left: 0;

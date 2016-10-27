@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: Georgia sans;
+  }
+h1 {
+    font-family: "Linux Libertine",Georgia,Times,serif;
+    font-size: 1.8em;
+    font-weight: normal;
+    border-bottom: solid 1px;
+    margin-bottom: 5px;
+  }
+  p {
+  }
+h2 {
+  }
+h3 {
+  }
+.redirect {
+  padding: 30px;
+  font-style: italic;
+  margin: 20px;
+  }
