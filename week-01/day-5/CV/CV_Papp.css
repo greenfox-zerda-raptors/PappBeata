@@ -1,61 +1,67 @@
 body {
-  margin: 0;
-  font-family: Georgia sans;
+  background-color: #55555;
   color: rgb(19, 58, 38);
-  }
-main {
-  margin: 10px auto;
-  width:  50%;
-  padding-bottom: 20px;
-    }
+  font-family: Georgia sans;
+  margin: 0;
+}
+header {
+  margin: 0 auto;
+}
 .bgimg {
-   z-index: -1;
-   background-image: url("improvement.jpg");
-   background-repeat:no-repeat;
-   background-size: cover;
-   height: 100%;
-   background-position: left center;
-   overflow: hidden;
-   opacity: 0.8;
-   margin: 0 auto;
-  }
+  background-image: url("improvement.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin: 0 auto;
+  opacity: 0.8;
+  overflow: hidden;
+  z-index: -1;
+}
 h1 {
-  padding: 20px;
-  text-align: right;
+  margin-top: 0;
   font-size: 60px;
+  padding: 20px;
   text-shadow: 2px 2px #8bdab1;
-  }
+  text-align: right;
+}
 h2 {
   padding: 20px;
   font-size: 50px;
   padding-top: 250px;
   text-shadow: 2px 2px #8bdab1;
-  }
-h3 {
-  font-size: 30px;
-  }
-.vline  {
-  border-top: thick solid;
-  padding-top: 25px;
-  }
+}
+main {
+  margin: 10px auto;
+  padding-bottom: 20px;
+  width: 60%;
+}
+span {
+  font-weight: bold;
+}
+hr  {
+  background: black;
+  height: 3px;
+  margin: 10px -50px auto -50px;
+}
 h4 {
   margin-bottom: 0;
-  }
+}
 h5 {
-  margin-top: 3px;
   font-style: italic;
+  font-weight: 17px;
   font-family: Times new roman;
-  font-size: 17px;
-  }
+  margin-top: 3px;
+}
 blockquote.qstyle {
-  font: 14px;
-  margin-top: 0 -50px auto -50;
-  padding-top: 18px 10px 18px 50px;
   background-color: #dadada;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
   background-image: url(openquote4.gif);
   background-size: contain;
   background-position: left;
   background-repeat: no-repeat;
-  }
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  font: 14px;
+  margin: 0 -50px auto -50px;
+  padding: 15px 35px 15px 35px;
+}
