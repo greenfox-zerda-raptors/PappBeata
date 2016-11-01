@@ -1,24 +1,19 @@
-
-.Sub {
-background-color:rgb(255, 255, 0);
-width: 200px;
-font-size: 30px;
-color: darkblue;
-border-style: solid;
-border-color: black;
-border-width: 5px;
-padding: 15px;
-margin: 0;
-}
 ul {
-list-style-type: none;
-padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
-.Main  {
-width: 245px;
-margin: 10px;
-background-color: green;
-border-width: 25px;
-border-style: solid;
-border-color: green;
+.sub {
+  background-color:rgb(255, 255, 0);
+  border: solid black 5px;
+  color: darkblue;
+  font-size: 30px;
+  margin: 0;
+  padding: 15px;
+  width: 200px;
+}
+.main {
+  background-color: green;
+  border: 25px solid green;
+  margin: 10px;
+  width: 245px;
 }

@@ -1,23 +1,9 @@
 h1, h2 {
 color: green;
 }
-.Sub1 {
-color: darkblue;
-background-color:rgb(255, 255, 0);
+p {
+  margin: 0;
 }
-.Sub2 {
-background-color: rgb(0, 255, 255);
-color: red;
-}
-ul {
-list-style-type: none;
-padding: 0;
-}
-.Main  {
-width: 245px;
-margin: 10px;
-background-color: green;
-border-width: 25px;
-border-style: solid;
-border-color: green;
+.indented {
+  padding-left: 15px;
 }
