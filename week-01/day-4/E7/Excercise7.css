@@ -1,14 +1,16 @@
 div {
-font-size: 18px;
-border-left-style: solid;
-border-right-style: solid;
-border-bottom-style: solid;
-padding: 10px;
-width: 400px;
-}
-#last {
-border-bottom-style: hidden;
+  border: solid;
+  font-size: 18px;
+  margin-top: -2px;
+  padding: 10px;
+  width: 400px;
 }
 div:hover {
-    background-color: yellow;
+  background-color: yellow;
+}
+#first {
+  border-top-style: hidden;
+}
+#last {
+  border-bottom-style: hidden;
 }

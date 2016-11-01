@@ -1,37 +1,20 @@
 div {
-font-size: 18px;
-border-style: solid;
-border-bottom-style: hidden;
-padding: 30px;
-width: 300px;
-}
-#last {
-border-bottom-style: solid;
+  border-style: solid;
+  border-bottom-style: hidden;
+  font-size: 18px;
+  padding: 30px;
+  width: 300px;
 }
 .bgimg {
- z-index: -1;
- background-image: url("duck.png");
- background-repeat:no-repeat;
- background-position: left center;
- overflow: hidden;
- position: relative;
- display: block;
+  background-image: url("duck.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  z-index: -1;
 }
-.bgimg2 {
- z-index: -1;
- background-image: url("duck.png");
- background-repeat:no-repeat;
- background-position: center center;
- overflow: hidden;
- position: relative;
- display: block;
+.two {
+  background-position: center;
 }
-.bgimg3 {
- z-index: -1;
- background-image: url("duck.png");
- background-repeat:no-repeat;
- background-position: right bottom;
- overflow: hidden;
- position: relative;
- display: block;
+.three {
+  background-position: right bottom;
+  border-bottom-style: solid;
 }
