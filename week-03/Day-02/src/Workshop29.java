@@ -9,6 +9,13 @@ public class Workshop29{
         // and is_bonus is False decrement ab by 1
         // if is_bonus is True ab should remain the same
 
-        System.out.println();
+        if (is_bonus == true) {
+            } else if (credits >= 50){
+            ab = ab -2;
+        } else {
+            ab = ab - 1;
+        }
+
+        System.out.println(ab);
     }
 }

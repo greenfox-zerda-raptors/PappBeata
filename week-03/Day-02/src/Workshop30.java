@@ -10,6 +10,14 @@ public class Workshop30{
         // set out to 'Time out'
         // otherwise set out to 'Run Forest Run!'
 
-        System.out.println();
+        if (time > 200) {
+            out = "Time out";
+        } else if (ac%4 == 0){
+            out = "check";
+        } else {
+            out = "Run Forest Rum!";
+        }
+
+        System.out.println(out);
     }
 }
