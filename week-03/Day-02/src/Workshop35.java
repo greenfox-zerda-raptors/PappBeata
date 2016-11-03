@@ -11,16 +11,16 @@ public class Workshop35 {
 
         int i;
         int m;
-        String k = "*";
+        String k = "";
         String l = "";
 
         for (i = 1; i <= 7; i++) {
             l = l.concat(String.valueOf(i));
-            for (m = 1; m <= 6-i; m++) {
-                k = k.concat(k);
+            for (m = 1; m <= 7-i; m++) {
+                k = k.concat("*");
             }
-            k = "*";
             System.out.println(l.concat(k));
+            k = "";
         }
     }
 }
