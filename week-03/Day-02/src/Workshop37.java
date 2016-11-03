@@ -14,15 +14,18 @@ public class Workshop37 {
         int m;
         String k = "#";
         String l = "";
+        String t = "";
 
-        //l = StringUtils.repeat(k,5);
-
-        for (m = 1; m <= 5; m++) {
+        for (m = 1; m <= 7; m++) {
             l = l.concat(k);
         }
 
         for (i = 1; i <= 5; i++) {
-            System.out.println(l);
+            if (i%2 == 0){
+                t = " ";
+            }
+            System.out.println(t+l);
+            t = "";
         }
     }
 }
