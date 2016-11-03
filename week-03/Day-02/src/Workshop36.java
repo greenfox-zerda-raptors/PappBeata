@@ -8,6 +8,20 @@ public class Workshop36 {
         // # # # # #
         // The # character should be replacable, hence store it in a variable
 
-        System.out.println();
+        int i;
+        int m;
+        String k = "#";
+        String l = "";
+
+        //l = StringUtils.repeat(k,5);
+
+        for (m = 1; m <= 5; m++) {
+            l = l.concat(k);
+        }
+
+        for (i = 1; i <= 5; i++) {
+            System.out.println(l);
+        }
+
     }
 }
