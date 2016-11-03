@@ -13,11 +13,11 @@ public class Workshop36 {
         String k = "#";
         String l = "";
 
-        //l = StringUtils.repeat(k,5);
-
-        for (m = 1; m <= 5; m++) {
-            l = l.concat(k);
+        for (m = 1; m <= 4; m++) {
+            l = l+k+" ";
         }
+
+        l = l+k;
 
         for (i = 1; i <= 5; i++) {
             System.out.println(l);

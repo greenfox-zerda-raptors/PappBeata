@@ -6,21 +6,21 @@ public class Workshop34 {
         // For numbers which are multiples of both three and five print "FizzBuzz".
 
         int i = 0;
-        String div3 = "";
+        String div = "";
 
         for (i = 0; i <= 100; i = i + 1) {
 
                 if (i%3 == 0) {
-                    div3 = "Fizz";
+                    div = "Fizz";
                 }
                 if (i%5 == 0) {
-                    div3 = div3+"Buzz";
+                    div = div+"Buzz";
                 }
-                if (div3 == "") {
+                if (div == "") {
                     System.out.println(i);
                 } else {
-                    System.out.println(div3);
-                    div3 = "";
+                    System.out.println(div);
+                    div = "";
                 }
 
 /*

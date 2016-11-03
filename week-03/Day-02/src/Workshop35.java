@@ -15,7 +15,7 @@ public class Workshop35 {
         String l = "";
 
         for (i = 1; i <= 7; i++) {
-            l = l.concat(String.valueOf(i));
+            l = l+i;
             for (m = 1; m <= 7-i; m++) {
                 k = k.concat("*");
             }

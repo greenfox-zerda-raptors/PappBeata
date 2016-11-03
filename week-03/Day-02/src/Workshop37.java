@@ -12,20 +12,28 @@ public class Workshop37 {
 
         int i;
         int m;
-        String k = "#";
-        String l = "";
+        String baseline ;
+/*
         String t = "";
 
+        baseline = "";
+
         for (m = 1; m <= 7; m++) {
-            l = l.concat(k);
+            baseline = baseline+ "# ";
         }
 
-        for (i = 1; i <= 5; i++) {
-            if (i%2 == 0){
-                t = " ";
-            }
-            System.out.println(t+l);
-            t = "";
+        baseline = baseline.trim();
+*/
+
+        baseline = "";
+
+        for (m = 1; m <= 7; m++) {
+            baseline = baseline+ "# ";
         }
+            for (i = 1; i <= 7; i++) {
+            System.out.println( ((i%2 == 0) ? " " : "") + baseline);
+        }
+
+
     }
 }
