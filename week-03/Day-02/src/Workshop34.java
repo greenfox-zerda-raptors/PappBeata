@@ -5,6 +5,13 @@ public class Workshop34 {
         // and for the multiples of five print "Buzz".
         // For numbers which are multiples of both three and five print "FizzBuzz".
 
+        int i;
+
+        for (i = 0; i <= 100; i = i + 1) {
+            System.out.println(i);
+        }
+
+
         System.out.println();
     }
 }
