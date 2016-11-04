@@ -6,7 +6,9 @@ public class Workshop33{
         int i;
 
         for (i = 0; i <= 20; i = i + 2) {
-            System.out.println(i);
+
+         System.out.println(i);
+
         }
     }
 }

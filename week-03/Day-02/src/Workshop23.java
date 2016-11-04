@@ -8,7 +8,5 @@ public class Workshop23{
         } else {
             System.out.println("End of program");
         }
-
-
     }
 }
