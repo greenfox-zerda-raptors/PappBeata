@@ -1,4 +1,4 @@
-public class Workshop15{
+public class Workshop15 {
     public static void main(String[] args) {
         int af = 123;
         // create a function that doubles it's input
@@ -6,8 +6,8 @@ public class Workshop15{
 
         System.out.println(funDouble(af));
     }
-        public static int funDouble(int input)
-        {
-            return 2*input;
-        }
+
+    public static int funDouble(int input) {
+        return 2 * input;
     }
+}

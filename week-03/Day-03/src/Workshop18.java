@@ -9,7 +9,7 @@ public class Workshop18{
     public static int sumSeq(int input) {
         int i = 0;
         for (i=input-1; i >0;i--) {
-            input = input +i;
+            input += i;
         }
             return (input);
         }
