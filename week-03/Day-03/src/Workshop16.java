@@ -3,6 +3,10 @@ public class Workshop16{
         String ae = "Misi";
         // create a function that greets ae
 
-        System.out.println();
+        System.out.println(hola(ae));
+    }
+    public static String hola(String input)
+    {
+        return ("Buenos dias "+input+"!");
     }
 }

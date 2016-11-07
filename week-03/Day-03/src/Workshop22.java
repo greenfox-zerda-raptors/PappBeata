@@ -4,4 +4,9 @@ public class Workshop22{
 
         System.out.println();
     }
+    public static String funPrtParam(String input) {
+        input = "";
+        }
+        return (input);
+    }
 }
