@@ -21,7 +21,7 @@ public class Workshop22{
         funPrtParam(new String[] {"a", "b", "c"});
 
         //........Misi solution 2 - call - specialty that it works with function version 1
-         funPrtParam("a", "b", "c");
+        // funPrtParam("a", "b", "c");
     }
    /* public static String funPrtParam(String input1, String input2) {
         return "Parameter input1: "+input1+"\n"+"Parameter input2: "+input2;

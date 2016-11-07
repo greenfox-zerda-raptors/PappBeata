@@ -5,8 +5,14 @@ public class Workshop23{
         System.out.println();
 
         PrintValues(new int[] { 3, 4, 5, 6, 7});
-    }
 
+
+    }
+   /* public static void PrintValues(int[] values){
+        for(int i=0;i<values.length;i++){
+            System.out.print(values[i] + " ");
+        }
+    }*/
     public static void PrintValues(int[] values){
         for(int i=0;i<values.length;i++){
             System.out.print(values[i] + " ");
