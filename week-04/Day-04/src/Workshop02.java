@@ -51,11 +51,22 @@ public class Workshop02 {
             number = (int) (random * (maxnr - 1) + 1);
 
             //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            // Insult list
+
+
+            String[] insults = {"False!", "Not exactly!", "Almost... but not.", "Wrong","False!", "Not exactly!", "Almost... but not.", "Wrong","False!", "Not exactly!", "Almost... but not.", "Wrong","False!", "Not exactly!", "Almost... but not.", "Wrong"};
+
+
+            //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             // Guess process
 
             boolean toTheEnd = true;
 
+            int guessCounter = 0;
+
             while (toTheEnd) {
+
+                guessCounter = guessCounter + 1;
 
                 if (maxnr == 0) {
                     toTheEnd = false;
@@ -74,10 +85,10 @@ public class Workshop02 {
                     System.out.println("You are still shocked by Trump, aren't you? We need a number less than the maximum " + maxnr + "\n");
 
                 } else if (guess < number) {
-                    System.out.println("False! My number is higher actually. \nGive me a new guess:\n");
+                    System.out.println(insults[guessCounter] + " My number is higher actually. \nGive me a new guess:\n");
 
                 } else if (guess > number) {
-                    System.out.println("Not exactly! Try a bit lower. \nGive me a new guess:\n");
+                    System.out.println(insults[guessCounter] + " Try a bit lower. \nGive me a new guess:\n");
 
                 } else if (guess == number) {
                     System.out.println("Yesssssss, " + number + " is my number!\n");
