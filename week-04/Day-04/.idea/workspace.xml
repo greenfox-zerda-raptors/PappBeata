@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95749f34-78d3-4db5-b44a-ef995e8c3a4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop02.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop03.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop07.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop12.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop17.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop18.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Workshop02.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/out/production/Day-01/Workshop19.class" afterPath="$PROJECT_DIR$/../Day-01/out/production/Day-01/Workshop19.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/out/production/Day-01/Workshop20.class" afterPath="$PROJECT_DIR$/../Day-01/out/production/Day-01/Workshop20.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-03/Day-02/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../week-03/Day-02/.idea/workspace.xml" />
@@ -18,6 +10,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/src/Workshop18.java" afterPath="$PROJECT_DIR$/../Day-01/src/Workshop18.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/src/Workshop19.java" afterPath="$PROJECT_DIR$/../Day-01/src/Workshop19.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/src/Workshop20.java" afterPath="$PROJECT_DIR$/../Day-01/src/Workshop20.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop02.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop02.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop03.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop03.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop07.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop07.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop12.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop12.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop17.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop17.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop18.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop18.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Workshop02.java" afterPath="$PROJECT_DIR$/src/Workshop02.java" />
     </list>
     <ignored path="Day-04.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +52,8 @@
       <file leaf-file-name="Workshop02.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Workshop02.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="93" column="24" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+            <state relative-caret-position="95">
+              <caret line="82" column="65" selection-start-line="82" selection-start-column="65" selection-end-line="82" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -638,12 +638,12 @@
       <updated>1478732103246</updated>
       <workItem from="1478732104530" duration="4922000" />
       <workItem from="1478779532752" duration="9941000" />
-      <workItem from="1478854768133" duration="13649000" />
+      <workItem from="1478854768133" duration="16278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28512000" />
+    <option name="totallyTimeSpent" value="31141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -780,8 +780,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Workshop02.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="93" column="24" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+        <state relative-caret-position="95">
+          <caret line="82" column="65" selection-start-line="82" selection-start-column="65" selection-end-line="82" selection-end-column="65" />
           <folding />
         </state>
       </provider>
