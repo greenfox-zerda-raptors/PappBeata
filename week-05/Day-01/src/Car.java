@@ -32,13 +32,20 @@ public class Car {
     public void setTypeCar(String typeCar) {
         this.typeCar = typeCar;
     }
-
     public int Drive (int drove){
         kmOdometer = kmOdometer + drove;
-        System.out.printf("Brrm, the " + color + " " + typeCar + " just drove around town " + drove + " clicks.\n");
+        if (drove < 15) {
+            System.out.printf("Brrm, the " + color + " " + typeCar + " just drove around town " + drove + " clicks.\n");
+        } else if() {
+            System.out.printf("Brrm, screech, brrm, screech the " + color + " " + typeCar + " commuted " + drove + " clicks.\n");
+        } else {
+
+        }
         return kmOdometer;
     }
+    public void Car.toString(){
 
+    }
 }
 
 /*
