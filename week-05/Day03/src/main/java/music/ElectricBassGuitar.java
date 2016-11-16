@@ -4,8 +4,6 @@ public class ElectricBassGuitar extends StringedInstrument {
 
     public ElectricBassGuitar() {
         numberOfStrings = 4;
-        name = "ElectricBassGuitar";
-        sound = "Duum-duum-duum";
     }
     public ElectricBassGuitar(int numberOfStrings) {
         this.numberOfStrings =numberOfStrings;
@@ -13,6 +11,6 @@ public class ElectricBassGuitar extends StringedInstrument {
 
     public void play(){
 
-        System.out.printf(formatForPlay, name, numberOfStrings, sound);
+        System.out.printf(formatForPlay, name, numberOfStrings, "duum-duum-duums");
     }
 }
