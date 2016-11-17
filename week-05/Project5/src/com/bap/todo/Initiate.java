@@ -1,7 +1,9 @@
 package com.bap.todo;
 
 public class Initiate {
+
     public Initiate() {
+
         System.out.println("CLI Todo application\n====================\n");
         System.out.println("Available commands:\n");
         System.out.println("list : Lists all the tasks");
@@ -14,8 +16,8 @@ public class Initiate {
 //        System.out.println("c shorthand for complete\n");
         System.out.println("help : Print out this list again");
 //        System.out.println("h shorthand for help\n");
+        System.out.println("exit : quit program");
         System.out.println("\nWhat would you like to do? Type command: ");
 
-
-    }
+   }
 }

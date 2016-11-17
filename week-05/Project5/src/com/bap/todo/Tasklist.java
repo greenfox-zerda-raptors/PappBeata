@@ -3,10 +3,9 @@ import java.util.ArrayList;
 
 public class Tasklist {
 
-    static ArrayList ListOFTasks = new ArrayList( );
+    ArrayList ListOFTasks = new ArrayList( );
 
-    public static ArrayList addToList (String next){
+    public void addToList (String next){
         ListOFTasks.add(next);
-        return null;
     }
 }

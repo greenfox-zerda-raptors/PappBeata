@@ -8,28 +8,35 @@ public class App {
 
         //read file
 
-        String lastinput = Scanner.Scan();
+        char cmd = '0';
+        Scanner objScan = new Scanner();
+        Commands objCommands = new Commands();
 
-        char cmd = lastinput.charAt(0);
-        System.out.println(cmd);
+        while (cmd != 'e') {
 
-        if (cmd == 'a'){
-            Commands.addItem(lastinput.substring(3, 100));
+            String lastinput = objScan.Scan();
 
-        } else if (cmd == 'h'){
-            Commands.help();
+            cmd = lastinput.charAt(0);
 
-        } else if (cmd == 'l'){
-            Commands.listItems();
+            if (cmd == 'a') {
+                objCommands.addItem(lastinput.substring(3, lastinput.length() - 1));
 
-        }else if (cmd == 'c'){
-            Commands.complete(lastinput);
+            } else if (cmd == 'h') {
+                objCommands.help();
 
-        } else { //command remove
-            Commands.removeItem(lastinput);
+            } else if (cmd == 'l') {
+                objCommands.listItems();
 
+            } else if (cmd == 'c') {
+                objCommands.complete(lastinput);
+
+            } else { //command remove
+                objCommands.removeItem(lastinput.substring(6, lastinput.length() - 1));
+
+            }
+
+            //output into file
         }
-
 
     }
 }
