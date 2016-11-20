@@ -16,7 +16,7 @@ public class Initiate {
 //        System.out.println("c shorthand for complete\n");
         System.out.println("help : Print out this list again");
 //        System.out.println("h shorthand for help\n");
-        System.out.println("exit : quit program");
+        System.out.println("q : quit program");
         System.out.println("\nWhat would you like to do? Type command: ");
 
    }

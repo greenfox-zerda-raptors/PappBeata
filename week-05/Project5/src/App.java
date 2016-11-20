@@ -12,14 +12,14 @@ public class App {
         Scanner objScan = new Scanner();
         Commands objCommands = new Commands();
 
-        while (cmd != 'e') {
+        while (cmd != 'q') {
 
             String lastinput = objScan.Scan();
 
             cmd = lastinput.charAt(0);
 
             if (cmd == 'a') {
-                objCommands.addItem(lastinput.substring(3, lastinput.length() - 1));
+                objCommands.addItem(lastinput.substring(3));
 
             } else if (cmd == 'h') {
                 objCommands.help();
@@ -30,8 +30,10 @@ public class App {
             } else if (cmd == 'c') {
                 objCommands.complete(lastinput);
 
-            } else { //command remove
-                objCommands.removeItem(lastinput.substring(6, lastinput.length() - 1));
+            } else if (cmd == 'r') {
+                objCommands.removeItem(lastinput.substring(6));
+
+            } else { //command quit
 
             }
 

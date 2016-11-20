@@ -1,19 +1,26 @@
 package com.bap.todo;
 
-/**
- * Created by Papp Beata Andrea on 17.11.2016.
- */
 public class Commands {
-    Tasklist objTasklist = new Tasklist();
+
+    Tasklist ObjTasklist;
+
+
+    public Commands() {
+        ObjTasklist = new Tasklist();
+    }
 
     public void addItem(String inp) {
-        Task nextToDo = new Task(inp);
-        objTasklist.addToList(inp); //ezt majd az objectre valtoztatni
+        Task NextToDo = new Task(inp);
+        ObjTasklist.add(NextToDo);
     }
 
     public void listItems() {
-        System.out.println("Items listed");
-        System.out.println(objTasklist.ListOFTasks);
+
+         for (Task i : ObjTasklist){
+
+            System.out.println(i.toString());
+
+        }
     }
 
     public void removeItem(String inp) {
@@ -35,7 +42,7 @@ public class Commands {
         System.out.println("complete : Completes a task");
 //        System.out.println("c shorthand for complete\n");
         System.out.println("help : Print out this list again");
-        System.out.println("exit : quit program");
+        System.out.println("q : quit program");
     }
 }
 

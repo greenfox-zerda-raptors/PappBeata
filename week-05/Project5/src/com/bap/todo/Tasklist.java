@@ -1,11 +1,7 @@
 package com.bap.todo;
 import java.util.ArrayList;
 
-public class Tasklist {
+public class Tasklist extends ArrayList<Task>{
 
-    ArrayList ListOFTasks = new ArrayList( );
 
-    public void addToList (String next){
-        ListOFTasks.add(next);
-    }
 }
