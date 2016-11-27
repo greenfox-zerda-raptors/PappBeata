@@ -5,7 +5,7 @@ public class Workshop19{
         if (proverb.indexOf("worst") == -1) {
             System.out.println("Not found");
         } else {
-            System.out.println("Word worst found");
+            System.out.println("Word worst found at the index of " + proverb.indexOf("worst"));
         }
     }
 }

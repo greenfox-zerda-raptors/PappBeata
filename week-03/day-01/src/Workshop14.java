@@ -1,4 +1,3 @@
-
 public class Workshop14{
     public static void main(String[] args) {
         String l = "Java is awesome!";
