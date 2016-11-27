@@ -8,7 +8,7 @@ public class Workshop37 {
         // # # # # # # #
         //  # # # # # # #
         // # # # # # # #
-        // The # character should be replacable, hence store it in a variable
+        // The # character should be replaceable, hence store it in a variable
 
         int i;
         int m;
@@ -30,7 +30,7 @@ public class Workshop37 {
         for (m = 1; m <= 7; m++) {
             baseline = baseline+ "# ";
         }
-            for (i = 1; i <= 7; i++) {
+        for (i = 1; i <= 7; i++) {
             System.out.println( ((i%2 == 0) ? " " : "") + baseline);
         }
 

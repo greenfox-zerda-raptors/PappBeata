@@ -6,7 +6,7 @@ public class Workshop36 {
         // # # # # #
         // # # # # #
         // # # # # #
-        // The # character should be replacable, hence store it in a variable
+        // The # character should be replaceable, hence store it in a variable
 
         int i;
         int m;
@@ -22,6 +22,5 @@ public class Workshop36 {
         for (i = 1; i <= 5; i++) {
             System.out.println(l);
         }
-
     }
 }
