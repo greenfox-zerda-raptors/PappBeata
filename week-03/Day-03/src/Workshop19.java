@@ -8,9 +8,9 @@ public class Workshop19 {
     }
 
     public static int funFactor(int input) {
-        int i = 0;
+        int i;
         for (i = input - 1; i > 0; i--) {
-            input = input * i;
+            input *= i;
         }
         return (input);
     }

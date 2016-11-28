@@ -1,6 +1,4 @@
 public class Workshop22{
-
-
     //........Misi solution 1 - function
     static void funPrtParam(String ...input) {
         for (int i = 0; i < input.length; i++) {

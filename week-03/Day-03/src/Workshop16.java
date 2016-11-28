@@ -3,9 +3,9 @@ public class Workshop16{
         String ae = "Misi";
         // create a function that greets ae
 
-        System.out.println(hola(ae));
+        System.out.println(Hola(ae));
     }
-    public static String hola(String input)
+    public static String Hola(String input)
     {
         return ("Buenos dias "+input+"!");
     }
