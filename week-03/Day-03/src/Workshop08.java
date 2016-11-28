@@ -1,8 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-import static com.sun.xml.internal.bind.WhiteSpaceProcessor.replace;
-
 public class Workshop08{
     public static void main(String[] args) {
         // Task 1: Create (dynamically) a two dimensional array with the following matrix. Use a loop!
@@ -15,7 +13,7 @@ public class Workshop08{
 
         int [][] array2D;
         array2D = new int [4][4];
-        int i = 1;
+        int i;
 
 
         for (i=0; i<4; i++) {

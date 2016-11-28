@@ -4,7 +4,7 @@ public class Workshop13{
         int[] ah = new int[]  { 3, 4, 5, 6, 7 };
         // print the sum of all numbers in ah
 
-        int i=0;
+        int i;
         int sum = 0;
 
         for (i=0;i<ah.length; i++) {

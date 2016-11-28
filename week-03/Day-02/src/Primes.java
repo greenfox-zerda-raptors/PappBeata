@@ -1,13 +1,12 @@
 public class Primes {
 
     public static void main(String... args){
-
         boolean isPrime;
 
         System.out.println(2);
+        System.out.println(3);
 
-        for (int i = 3; i < 101; i ++) {
-
+        for (int i = 2; i < 101; i ++) {
             isPrime = false;
 
             for (int j = 2; j < i / 2 + 2;) {
@@ -15,13 +14,10 @@ public class Primes {
                 if (i % j == 0) {
                     break;
                 }
-
                 if (j == i / 2) {
                     isPrime = true;
                 }
-
                 j ++;
-
             }
 
             if (isPrime) {

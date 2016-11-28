@@ -1,7 +1,7 @@
 public class Workshop12{
     public static void main(String[] args) {
         // Swap the first element of the array
-        // Expected outpt: third second first
+        // Expected output: third second first
         String[] abc = new String[] { "first", "second", "third" };
 
        String swap = "";
