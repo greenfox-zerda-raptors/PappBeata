@@ -8,7 +8,8 @@ public class Workshop20{
         // second line
         // third line
 
-
+        sb.insert(0, "first line \n");
+        sb.append("third line \n");
         System.out.println(sb.toString());
     }
 }
