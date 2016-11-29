@@ -11,7 +11,11 @@ public class Workshop17{
     // "fifth"
 
     static void trimAll(List<String> strings) {
-        // ???
+        ListIterator itr = strings.listIterator();
+        for (; itr.hasNext(); ) {
+            String element = (String) itr.next();
+            itr.set(element.trim());
+        }
     }
 
     public static void main(String... args){
