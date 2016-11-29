@@ -1,12 +1,12 @@
+import java.util.*;
+
 public class Workshop03{
     public static void main(String... args){
-        String example = "A long example string";
+        ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList("first", "second", "fourth"));
+        // The "third" element is missing from the arrayList. Insert it into the arrayList between second and fourth
 
-        example.replace("long", "short");
-        // I would like to replace "long" with "short" in this example, but it has a problem. Please fix it! Don't forget that String is immutable
-        // Expected ouput: A short example string
+        arrayList.add(2, "third");
 
-
-        System.out.println(example);
+        System.out.println(arrayList);
     }
 }
