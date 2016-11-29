@@ -1,12 +1,11 @@
 public class Workshop21{
     public static void main(String... args){
-        String example = "A long example string";
+        StringBuilder sb = new StringBuilder("first third fourth");
+        // Add "second" to the StringBuilder (sb) between the words "first" and "third"
+        // Expected outpt: first second third fourth
 
-        example.replace("long", "short");
-        // I would like to replace "long" with "short" in this example, but it has a problem. Please fix it! Don't forget that String is immutable
-        // Expected ouput: A short example string
+        sb.insert(6, "second ");
 
-
-        System.out.println(example);
+        System.out.println(sb.toString());
     }
 }
