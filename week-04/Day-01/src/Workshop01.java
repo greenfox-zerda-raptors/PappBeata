@@ -1,8 +1,16 @@
-public class Workshop01{
-    public static void main(String[] args) {
-        int[] q = new int[] { 4, 5, 6, 7 };
-        // get the 3rd element of q
+import java.util.*;
 
-        System.out.println(q[2]);
+public class Workshop01{
+    public static void main(String... args){
+        ArrayList<Object> arrayList = new ArrayList<Object>();
+        // Add multiple elements to the list and print the number of the elements
+
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
+
+        int arrayListSize = arrayList.size();
+
+        System.out.println(arrayListSize);
     }
 }

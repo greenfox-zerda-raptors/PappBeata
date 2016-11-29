@@ -1,12 +1,11 @@
+import java.util.*;
+
 public class Workshop02{
     public static void main(String... args){
-        String example = "A long example string";
+        String[] numbers = new String[] { "one", "two", "three", "four", "five"};
+        // Initialize the arrayList using the numbers array
+        ArrayList arrayList = new ArrayList(); // ??
 
-        example.replace("long", "short");
-        // I would like to replace "long" with "short" in this example, but it has a problem. Please fix it! Don't forget that String is immutable
-        // Expected ouput: A short example string
-
-
-        System.out.println(example);
+        System.out.println(arrayList);
     }
 }
