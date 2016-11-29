@@ -12,6 +12,8 @@ public class Workshop07{
         }
         // Remove "removable" from the list, but without using the index of the element.
 
+        arrayList.remove("removable");
+
         System.out.println(arrayList);
     }
 }
