@@ -6,6 +6,9 @@ public class Workshop09{
         // Add "first" to the beginning of the list and add "fifth" to the end of the list
         // Expected output: [first, second, third, fourth, fifth]
 
+        list.add(0, "first");
+        list.add(4, "fifth");
+
         System.out.println(list);
     }
 }
