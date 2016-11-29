@@ -10,6 +10,8 @@ public class Workshop06{
         arrayList.add(4);
         // Accidentally we added number 3 twice. Your task is to remove it from the list
 
+        arrayList.remove(2);
+
         System.out.println(arrayList);
     }
 }
