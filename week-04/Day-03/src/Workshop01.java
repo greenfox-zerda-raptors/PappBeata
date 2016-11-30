@@ -35,7 +35,7 @@ public class Workshop01 {
         while (age != 0) {
             age = checkValidAge();
         }
-        System.out.printf("You are %d years old", age);
+        System.out.printf("You are %d years old\n", age);
 
         getAFile("./somestuff.txt");
 
@@ -46,7 +46,7 @@ public class Workshop01 {
         try {
             System.out.println(a / 0);
         } catch (ArithmeticException e) {
-            System.out.println("no can do\n" + e.getMessage() + "\n" + e.toString() + "\n" );
+            System.out.println("cannot do\n" + e.getMessage() + "\n" + e.toString() + "\n" );
 //            e.printStackTrace(); // this is its own print statement
         }
     }
@@ -58,7 +58,7 @@ public class Workshop01 {
             return userInput.nextInt();
         } catch (InputMismatchException e) {
             userInput.next();
-            System.out.println("That isn't a whole number");
+            System.out.println("That isn't a whole number\n");
             return 0;
         }
 
@@ -99,7 +99,7 @@ public class Workshop01 {
         // If used finally is always executed whether there was an exception or not
         // It is used for clean up work like closing files and database connections
         finally {
-            System.out.println("");
+            System.out.println("Program exists");
         }
     }
 }
