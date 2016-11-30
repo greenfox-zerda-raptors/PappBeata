@@ -1,9 +1,8 @@
 import java.util.*;
-import java.io.*;
+
 public class Workshop03 {
 
     static Scanner userInput = new Scanner(System.in);
-
 
     public static void main(String[] args) {
         int input = -1;
