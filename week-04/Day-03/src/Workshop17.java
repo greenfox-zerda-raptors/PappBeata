@@ -1,7 +1,8 @@
-package PACKAGE_NAME;
+import java.util.Scanner;
+import java.io.File;
 
-/**
- * Created by Papp Beata Andrea on 11.11.2016.
- */
 public class Workshop17 {
-}
+    static Scanner scanner = new Scanner(System.in);
+
+//tb copied from aze
+   }
