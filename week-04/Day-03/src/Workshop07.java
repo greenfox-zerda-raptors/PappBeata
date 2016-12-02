@@ -33,19 +33,19 @@ public class Workshop07 {
     public static void main(String[] args) {
 
         Scanner userInput = new Scanner(System.in);
-        int age;
-        String prompt = "Enter a value from 1 to 9 or 0 to exit?";
+        int num;
 
-        System.out.println(prompt);
+        System.out.println("Enter a value from 1 to 9 or 0 to exit:\n");
         while (userInput.hasNextInt()) {
-            age = userInput.nextInt();
-            if (age == 0) {
+            num = userInput.nextInt();
+            if (num == 0) {
                 break;
             } else {
-                try {
-                    System.out.println("try - first statement");
-                    myMethod(age);
-                    System.out.println("try - last statement");
+                try
+                {
+                    System.out.println("test - first statement");
+                    myMethod(num);
+                    System.out.println("test - last statement");
                 } catch (Exception ex) {
                     System.out.println("An Exception");
                 }
