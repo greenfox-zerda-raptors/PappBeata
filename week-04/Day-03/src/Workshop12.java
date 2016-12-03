@@ -32,7 +32,7 @@ public class Workshop12 {
 
     public static void main(String[] args){
 
-        String strDirectoryPath = "D:/Eric/JavaBits";
+        String strDirectoryPath = "C:/Greenfox/git/PappBeata/week-04/Day-03/JavaBits";
         String strFileName = "random";
         String strExtension = ".txt";
 
@@ -102,7 +102,7 @@ public class Workshop12 {
 
         } else {
 
-            System.out.println("File Doesn't Exist");
+            System.out.println("File doesn't Exist");
 
         }
 
@@ -113,22 +113,21 @@ public class Workshop12 {
             fileName.toString();
         };
 
-/**  ONLY DO THIS ONCE YOU ARE 100% SURE that the variables are pointing to the test files!!!
- *
- // You call delete to delete a file
- if(randomFile.delete()){  //this will be the file written to the current directory
- System.out.println("File Deleted");
- }
- // I could get an array of File objects from the directory
- File[] filesInDir = randomDir.listFiles();
- for(File fileName : filesInDir){
- fileName.delete();
- }
- // You can only delete a directory if it is empty
- if(randomDir.delete()){
- System.out.println("Directory Deleted");
- }
- **/
+//  ONLY DO THIS ONCE YOU ARE 100% SURE that the variables are pointing to the test files!!!
 
+//  You call delete to delete a file
+
+        if(randomFile.delete()){  //this will be the file written to the current directory
+            System.out.println("File Deleted");
+        }
+        // I could get an array of File objects from the directory
+        filesInDir = randomDir.listFiles();
+        for(File fileName : filesInDir){
+            fileName.delete();
+        }
+        // You can only delete a directory if it is empty
+        if(randomDir.delete()){
+            System.out.println("Directory Deleted");
+        }
     }
 }
