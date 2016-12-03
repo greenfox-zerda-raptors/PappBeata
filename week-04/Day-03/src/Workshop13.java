@@ -9,7 +9,7 @@
  *
  * PATH/FILE?
  * C:\Temppp
- * SORRY  C:\Tempppp is not a directory or does not exist.
+ * SORRY  C:\Temppp is not a directory or does not exist.
  * Bye!
 
  //// Or if the directory exists:
@@ -29,7 +29,7 @@
  * Then you need a foreach
  */
 
-import java.io.File;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Scanner;
@@ -37,30 +37,66 @@ import java.util.Scanner;
 public class Workshop13 {
 
     //Declare something here (see Workshop12)
+    static String pathToList;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        System.out.println("PATH/FILE?");
 
         Scanner userInput = new Scanner(System.in);
-        String pathToList;
-
-        System.out.print("Path: ");
 
         if (userInput.hasNextLine()){
             pathToList = userInput.nextLine();
-            if(pathToList.equals("q")) {
- //               break;
-            }
 
+            if(pathToList.equals("q")) {
+                System.out.print("Program terminated on user request");
+                System.exit(0);
+            }
             printDirectoryContents(pathToList);
-            System.out.print("Path: ");
         }
+        System.out.println("\nBye!");
     }
 
-    private static void printDirectoryContents(String pathToList) {
+    private static void printDirectoryContents(String pathToList) throws IOException {
         // Implement this function
         // Open the File
         // Does it exist?
         // Is it a directory
         // If so, set an array & loop
+        File myFile = new File(pathToList);
+
+        if (myFile.isFile()) {
+
+            try
+            {
+            System.out.println("The content of the file is:");
+            FileReader fileReader = new FileReader(myFile);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            StringBuffer stringBuffer = new StringBuffer();
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuffer.append(line);
+                stringBuffer.append("\n");
+            }
+            fileReader.close();
+            System.out.println(stringBuffer.toString());
+            } catch (IOException e) {
+                 e.printStackTrace();
+            }
+
+        } else if (myFile.isDirectory()){
+
+            String[] fileList;
+            fileList = myFile.list();
+
+            System.out.println("The content of the directory is:");
+
+            for(String item:fileList)
+            {
+                System.out.println(item);
+            }
+        } else {
+            System.out.println("SORRY  " + pathToList + " is not a directory or a file or does not exist.");
+        }
     }
 }

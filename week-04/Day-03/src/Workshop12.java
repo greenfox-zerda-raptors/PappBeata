@@ -27,7 +27,6 @@ import java.io.*;
 public class Workshop12 {
 
     static String filePath,parentDirectory;
-
     static File randomDir, randomFile, randomFile2;
 
     public static void main(String[] args){
