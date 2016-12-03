@@ -19,7 +19,7 @@ import  java.io.*;
 
 public class Workshop14{
 
-    private static String filePathAndName = "D:/Eric/JavaBits/customers.txt";
+    private static String filePathAndName = "C:/Test/customers.txt";
 
     public static void main(String[] args){
 
