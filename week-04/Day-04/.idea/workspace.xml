@@ -2,22 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95749f34-78d3-4db5-b44a-ef995e8c3a4b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Day-04/Workshop02.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/out/production/Day-01/Workshop19.class" afterPath="$PROJECT_DIR$/../Day-01/out/production/Day-01/Workshop19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/out/production/Day-01/Workshop20.class" afterPath="$PROJECT_DIR$/../Day-01/out/production/Day-01/Workshop20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-03/Day-02/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../week-03/Day-02/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../zerda-exam-html-css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-03/Day-03/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../week-03/Day-03/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Day-01/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/src/Workshop18.java" afterPath="$PROJECT_DIR$/../Day-01/src/Workshop18.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/src/Workshop19.java" afterPath="$PROJECT_DIR$/../Day-01/src/Workshop19.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-01/src/Workshop20.java" afterPath="$PROJECT_DIR$/../Day-01/src/Workshop20.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop02.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop02.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop03.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop03.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop07.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop07.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop12.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop12.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop17.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop17.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop18.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop18.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Day-03/src/Workshop16.java" afterPath="$PROJECT_DIR$/../Day-03/src/Workshop16.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Workshop02.java" afterPath="$PROJECT_DIR$/src/Workshop02.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-05/Day-01/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../week-05/Day-01/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-05/Day03/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../week-05/Day03/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-05/Project5/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../week-05/Project5/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-06/Day3/src/CounterApp.java" afterPath="$PROJECT_DIR$/../../week-06/Day3/src/CounterApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-06/Day3/src/UIControls.java" afterPath="$PROJECT_DIR$/../../week-06/Day3/src/UIControls.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-06/Day3/src/Workshop1.java" afterPath="$PROJECT_DIR$/../../week-06/Day3/src/Workshop1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-06/Day4/src/ImagePanel.java" afterPath="$PROJECT_DIR$/../../week-06/Day4/src/ImagePanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-06/Day4/src/ImagePanel2.java" afterPath="$PROJECT_DIR$/../../week-06/Day4/src/ImagePanel2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-06/Day4/src/W06D4Eventcounter.java" afterPath="$PROJECT_DIR$/../../week-06/Day4/src/W06D4Eventcounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-06/Day4/src/WrapperApp.java" afterPath="$PROJECT_DIR$/../../week-06/Day4/src/WrapperApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../week-06/Day4/src/WrapperApp2.java" afterPath="$PROJECT_DIR$/../../week-06/Day4/src/WrapperApp2.java" />
     </list>
     <ignored path="Day-04.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +43,8 @@
       <file leaf-file-name="Workshop01.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Workshop01.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,8 +53,8 @@
       <file leaf-file-name="Workshop02.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Workshop02.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,8 +122,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -157,7 +159,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,9 +166,9 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Day-03" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Workshop02">
+  <component name="RunManager" selected="Application.Workshop01">
     <configuration default="false" name="Workshop01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Workshop01" />
@@ -618,8 +619,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Workshop02" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Workshop01" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Workshop01" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Workshop02" />
       </list>
     </recent_temporary>
   </component>
@@ -639,15 +640,17 @@
       <workItem from="1478732104530" duration="4922000" />
       <workItem from="1478779532752" duration="9941000" />
       <workItem from="1478854768133" duration="18653000" />
+      <workItem from="1480533280933" duration="3024000" />
+      <workItem from="1480849098909" duration="3580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33516000" />
+    <option name="totallyTimeSpent" value="40120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -656,7 +659,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35315102" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35196194" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -733,6 +736,38 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Workshop01.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Workshop02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2800">
+          <caret line="112" column="29" selection-start-line="112" selection-start-column="29" selection-end-line="112" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Workshop01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Workshop02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Workshop01.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
@@ -772,16 +807,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Workshop01.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="375">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Workshop02.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,4 +1,4 @@
-//The program randomly choses a number and then gives hints and/or goads the user for not determining it
+//The program randomly chooses a number and then gives hints and/or goads the user for not determining it
 import java.util.*;
 public class Workshop02 {
 
@@ -66,7 +66,7 @@ public class Workshop02 {
 
             while (toTheEnd) {
 
-                guessCounter = guessCounter + 1;
+                guessCounter +=1;
 
                 if (maxnr == 0) {
                     toTheEnd = false;
