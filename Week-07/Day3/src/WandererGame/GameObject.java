@@ -6,12 +6,12 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class PositionedImage {
+public class GameObject {
 
     BufferedImage image;
     int posX, posY;
 
-    public PositionedImage(String filename, int posX, int posY) {
+    public GameObject(String filename, int posX, int posY) {
         this.posX = posX;
         this.posY = posY;
         try {
@@ -19,12 +19,11 @@ public class PositionedImage {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public void draw(Graphics graphics) {
         if (image != null) {
-            graphics.drawImage(image, posX, posY, null);
+            graphics.drawImage(image, posX * 72, posY * 72, null);
         }
     }
 }

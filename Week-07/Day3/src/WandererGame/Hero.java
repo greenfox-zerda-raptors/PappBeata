@@ -1,7 +1,7 @@
 package WandererGame;
 
-/**
- * Created by Papp Beata Andrea on 07.12.2016.
- */
-public class Hero {
+public class Hero extends GameObject{
+    public Hero(int posX, int posY) {
+        super("hero.png", posX, posY);
+    }
 }

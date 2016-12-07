@@ -1,7 +1,8 @@
 package WandererGame;
 
-/**
- * Created by Papp Beata Andrea on 07.12.2016.
- */
 public abstract class Characters extends PositionedImage  {
+    public Characters(String filename, int posX, int posY) {
+        super(filename, posX, posY);
+    }
 }
+
