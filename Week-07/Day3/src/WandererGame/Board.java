@@ -45,7 +45,6 @@ public class Board extends JComponent implements KeyListener {
         // set the size of your draw board
         setPreferredSize(new Dimension(720, 720));
         setVisible(true);
-
     }
 
     @Override
@@ -66,20 +65,17 @@ public class Board extends JComponent implements KeyListener {
     public void keyPressed(KeyEvent e) {
 
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            hero.posY -=1;
-            paint(getGraphics());
+            hero.Move(0, -1);
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            hero.posY +=1;
-            paint(getGraphics());
+            hero.Move(0, 1);
         } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            hero.posX -=1;
-            paint(getGraphics());
+            hero.Move(-1, 0);
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            hero.posX +=1;
-            paint(getGraphics());
+            hero.Move(1, 0);
         } else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-            paint(getGraphics());
+
         }
+        paint(getGraphics());
     }
     @Override
     public void keyReleased(KeyEvent e) {}

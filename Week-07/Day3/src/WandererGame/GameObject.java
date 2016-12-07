@@ -25,4 +25,16 @@ public class GameObject {
             graphics.drawImage(image, posX * 72, posY * 72, null);
         }
     }
+
+    public void Move(int xDirection, int yDirection) {
+        if (xDirection == 1) {
+            this.posX += 1;
+        } else if (xDirection == -1) {
+            this.posX -= 1;
+        } else if (yDirection == 1) {
+            this.posY += 1;
+        }else if (yDirection == -1){
+            this.posY -= 1;
+        }
+    }
 }
