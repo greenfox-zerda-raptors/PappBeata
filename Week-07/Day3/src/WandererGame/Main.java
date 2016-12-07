@@ -1,14 +1,15 @@
 package WandererGame;
-
 import javax.swing.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame();
-        frame.add(new Board());
-        frame.pack();
-        frame.setVisible(true);
+        JFrame myFrame = new JFrame("Wanderer Game");
+        Board board = new Board();
+        myFrame.add(board);
+        myFrame.pack();
+        myFrame.setVisible(true);
+        myFrame.addKeyListener(board);
     }
 }
 
