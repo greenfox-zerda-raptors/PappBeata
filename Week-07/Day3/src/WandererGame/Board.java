@@ -1,4 +1,5 @@
 package WandererGame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 
 public class Board extends JComponent implements KeyListener {
 
-    ArrayList<GameObject> gameObjects;
+    public ArrayList<GameObject> gameObjects = new ArrayList<>();
     private final Hero hero;
     private final Boss boss;
     private final Monster scelet1;
@@ -25,23 +26,25 @@ public class Board extends JComponent implements KeyListener {
                 {0, 1, 0, 1, 0, 1, 1, 0, 1, 1},
                 {0, 0, 0, 0, 0, 1, 1, 0, 0, 0},
                 {0, 1, 1, 1, 0, 0, 0, 0, 1, 0},
-                {0, 0, 0, 1, 0, 1, 1, 0, 1, 0} };
+                {0, 0, 0, 1, 0, 1, 1, 0, 1, 0}};
+
 
         //drawing the gameboard acc to hardcode board template as shown above
-        gameObjects = new ArrayList<>();
         for (int i = 0; i < tilesArray.length; i++) {
             for (int j = 0; j < tilesArray[i].length; j++) {
-                if (tilesArray[i][j]==1) {
-                    gameObjects.add(new Wall(i, j));
+                if (tilesArray[i][j] == 1) {
+                    gameObjects.add(new Wall(j, i));
+                    gameObjects.get(gameObjects.size() - 1).setRestrictField(true);
                 } else {
-                    gameObjects.add(new Floor(i, j));
+                    gameObjects.add(new Floor(j, i));
+                    gameObjects.get(gameObjects.size() - 1).setRestrictField(false);
                 }
             }
         }
-        hero = new Hero(0,0);
-        boss = new Boss(5,5);
-        scelet1 = new Monster(3,8);
-        scelet2 = new Monster(2,6);
+        hero = new Hero(0, 0);
+        boss = new Boss(5, 5);
+        scelet1 = new Monster(3, 8);
+        scelet2 = new Monster(2, 6);
         // set the size of your draw board
         setPreferredSize(new Dimension(720, 720));
         setVisible(true);
@@ -60,22 +63,26 @@ public class Board extends JComponent implements KeyListener {
     }
 
     @Override
-    public void keyTyped(KeyEvent e) {}
+    public void keyTyped(KeyEvent e) {
+    }
+
     @Override
     public void keyPressed(KeyEvent e) {
 
         if (e.getKeyCode() == KeyEvent.VK_UP) {
-            hero.Move(0, -1);
+            hero.Move(0, -1, gameObjects);
         } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-            hero.Move(0, 1);
+            hero.Move(0, 1, gameObjects);
         } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-            hero.Move(-1, 0);
+            hero.Move(-1, 0, gameObjects);
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-            hero.Move(1, 0);
+            hero.Move(1, 0, gameObjects);
         } else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
         }
         paint(getGraphics());
     }
+
     @Override
-    public void keyReleased(KeyEvent e) {}
+    public void keyReleased(KeyEvent e) {
+    }
 }
