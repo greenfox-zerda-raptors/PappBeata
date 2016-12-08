@@ -73,7 +73,6 @@ public class Board extends JComponent implements KeyListener {
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
             hero.Move(1, 0);
         } else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-
         }
         paint(getGraphics());
     }
