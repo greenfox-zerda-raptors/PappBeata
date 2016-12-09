@@ -11,8 +11,10 @@ public class Board extends JComponent implements KeyListener {
     public ArrayList<GameObject> gameObjects = new ArrayList<>();
     private final Hero hero;
     private final Boss boss;
-    private final Monster scelet1;
-    private final Monster scelet2;
+    private final Monster skelet1;
+    private final Monster skelet2;
+    private final Monster skelet3;
+    public int level = 1;
 
     public Board() {
         //board template, zero = floor, 1 = wall - used only once to set the array of boardelement objects
@@ -41,25 +43,55 @@ public class Board extends JComponent implements KeyListener {
                 }
             }
         }
-        hero = new Hero(0, 0);
         boss = new Boss(5, 5);
-        scelet1 = new Monster(3, 8);
-        scelet2 = new Monster(2, 6);
+        skelet1 = new Monster(7, 8, "skelet1");
+        skelet2 = new Monster(2, 6, "skelet2");
+        skelet3 = new Monster(8, 3, "skelet3");
+        hero = new Hero(0, 0);
         // set the size of your draw board
-        setPreferredSize(new Dimension(720, 720));
+        setPreferredSize(new Dimension(720, 900));
         setVisible(true);
     }
 
     @Override
     public void paint(Graphics graphics) {
-        // here you have a 720x720 canvas
-        for (GameObject gameObject : gameObjects) {
-            gameObject.draw(graphics);
+
+        if (hero.isAlive) {
+
+            // here you have a 720x720 canvas
+            for (GameObject gameObject : gameObjects) {
+                gameObject.draw(graphics);
+            }
+            if (skelet1.isAlive) {
+                skelet1.draw(graphics);
+                if (skelet1.isFighting) {
+                    graphics.drawString(skelet1.toString(), 220, 790);
+                }
+            }
+            if (skelet2.isAlive) {
+                skelet2.draw(graphics);
+                if (skelet1.isFighting) {
+                    graphics.drawString(skelet2.toString(), 220, 850);
+                }
+            }
+            if (skelet3.isAlive) {
+                skelet3.draw(graphics);
+                if (skelet1.isFighting) {
+                    graphics.drawString(skelet3.toString(), 220, 820);
+                }
+            }
+            if (boss.isAlive) {
+                boss.draw(graphics);
+                if (skelet1.isFighting) {
+                    graphics.drawString(boss.toString(), 220, 880);
+                }
+            }
+            hero.draw(graphics);
+            graphics.drawString(hero.toString(), 220, 760);
+        } else {
+            graphics.drawString(hero.endOfGame(), 20, 260);
         }
-        hero.draw(graphics);
-        boss.draw(graphics);
-        scelet1.draw(graphics);
-        scelet2.draw(graphics);
+
     }
 
     @Override

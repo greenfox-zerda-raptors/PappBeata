@@ -16,6 +16,11 @@ public class GameObject {
     BufferedImage image;
     int posX, posY;
     public boolean restrictField = true;
+    public String objectName;
+
+    public String getObjectName() {
+        return objectName;
+    }
 
     public void setRestrictField(boolean restrictField) {
         this.restrictField = restrictField;
@@ -29,16 +34,16 @@ public class GameObject {
         this.image = image;
     }
 
-    public GameObject(String filename, int posX, int posY) {
+    public GameObject(String filename, int posX, int posY, String objectName) {
         this.posX = posX;
         this.posY = posY;
+        this.objectName = objectName;
         try {
             image = ImageIO.read(new File(filename));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 
     public void draw(Graphics graphics) {
         if (image != null) {
@@ -49,24 +54,30 @@ public class GameObject {
     public void Move(int xDirection, int yDirection, ArrayList<GameObject> gameObjects) {
         if (xDirection == 1) {
             this.setImage(rightImg);
-            if (!gameObjects.get(posX + 1 + 10 * posY).isRestrictField() && this.posX != 9) {
+            if (this.posX != 9 && !gameObjects.get(posX + 1 + 10 * posY).isRestrictField()) {
                 this.posX += 1;
             }
         } else if (xDirection == -1) {
             this.setImage(leftImg);
-            if (!gameObjects.get(posX - 1 + 10 * posY).isRestrictField() && this.posX != 0) {
+            if (this.posX != 0 && !gameObjects.get(posX - 1 + 10 * posY).isRestrictField()) {
                 this.posX -= 1;
             }
         } else if (yDirection == 1) {
             this.setImage(downImg);
-            if (!gameObjects.get(posX + 10 * (posY + 1)).isRestrictField() && this.posY != 9) {
+            if (this.posY != 9 && !gameObjects.get(posX + 10 * (posY + 1)).isRestrictField()) {
                 this.posY += 1;
             }
         } else if (yDirection == -1) {
             this.setImage(upImg);
-            if (!gameObjects.get(posX + 10 * (posY - 1)).isRestrictField() && this.posY != 0) {
+            if (this.posY != 0 && !gameObjects.get(posX + 10 * (posY - 1)).isRestrictField()) {
                 this.posY -= 1;
             }
         }
     }
+
+    public String endOfGame() {
+        return ("Hero is dead\nGame over!");
+    }
+
 }
+
