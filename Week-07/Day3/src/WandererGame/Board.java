@@ -69,42 +69,43 @@ public class Board extends JComponent implements KeyListener {
                 graphics.setColor(Color.BLACK);
                 graphics.setFont(new Font("TimesRoman", Font.PLAIN, 18));
                 graphics.drawString(hero.wonGame(), 120, 360);
-            }
+            } else {
 
-            // here you have a 720x720 canvas
-            for (GameObject gameObject : gameObjects) {
-                graphics.setFont(new Font("TimesRoman", Font.PLAIN, 18));
-                gameObject.draw(graphics);
-            }
+                // here you have a 720x720 canvas
+                for (GameObject gameObject : gameObjects) {
+                    graphics.setFont(new Font("TimesRoman", Font.PLAIN, 18));
+                    gameObject.draw(graphics);
+                }
 
-            graphics.setColor(Color.BLACK);
+                graphics.setColor(Color.BLACK);
 
-            if (skelet1.isAlive) {
-                skelet1.draw(graphics);
-                if (skelet1.isFighting) {
-                    graphics.drawString(skelet1.toString(), 220, 790);
+                if (skelet1.isAlive) {
+                    skelet1.draw(graphics);
+                    if (skelet1.isFighting) {
+                        graphics.drawString(skelet1.toString(), 220, 790);
+                    }
                 }
-            }
-            if (skelet2.isAlive) {
-                skelet2.draw(graphics);
-                if (skelet1.isFighting) {
-                    graphics.drawString(skelet2.toString(), 220, 790);
+                if (skelet2.isAlive) {
+                    skelet2.draw(graphics);
+                    if (skelet1.isFighting) {
+                        graphics.drawString(skelet2.toString(), 220, 790);
+                    }
                 }
-            }
-            if (skelet3.isAlive) {
-                skelet3.draw(graphics);
-                if (skelet1.isFighting) {
-                    graphics.drawString(skelet3.toString(), 220, 790);
+                if (skelet3.isAlive) {
+                    skelet3.draw(graphics);
+                    if (skelet1.isFighting) {
+                        graphics.drawString(skelet3.toString(), 220, 790);
+                    }
                 }
-            }
-            if (boss.isAlive) {
-                boss.draw(graphics);
-                if (skelet1.isFighting) {
-                    graphics.drawString(boss.toString(), 220, 790);
+                if (boss.isAlive) {
+                    boss.draw(graphics);
+                    if (skelet1.isFighting) {
+                        graphics.drawString(boss.toString(), 220, 790);
+                    }
                 }
+                hero.draw(graphics);
+                graphics.drawString(hero.toString(), 220, 760);
             }
-            hero.draw(graphics);
-            graphics.drawString(hero.toString(), 220, 760);
         } else {
             graphics.setColor(Color.BLACK);
             graphics.setFont(new Font("TimesRoman", Font.PLAIN, 18));
