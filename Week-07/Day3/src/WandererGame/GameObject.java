@@ -50,8 +50,12 @@ public class GameObject {
         }
     }
 
-    public String endOfGame() {
+    public String lostGame() {
         return ("Hero is dead     Game over!");
+    }
+
+    public String wonGame() {
+        return ("Congratulations! The Hero won! :)");
     }
 
 }

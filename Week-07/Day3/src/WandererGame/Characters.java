@@ -99,10 +99,11 @@ public class Characters extends GameObject {
         }
     }
 
-    public void Strike(Characters attacker, Characters defender) {
+    public void Strike(Characters attacker, Characters defender, ArrayList<Characters> enemyObjects) {
         attacker.currSV = attacker.currSP + d * 2;
         if (attacker.currSV > defender.currDP) {
             defender.currHP -= attacker.currSV - defender.currDP;
+            attacker.currHP += defender.currDP / 2;
         }
         if (attacker.currHP <= 0) {
             attacker.isAlive = false;
@@ -111,6 +112,7 @@ public class Characters extends GameObject {
         if (defender.currHP <= 0) {
             defender.isAlive = false;
             System.out.println("defender dead");
+            enemyObjects.remove(defender);
         }
     }
 

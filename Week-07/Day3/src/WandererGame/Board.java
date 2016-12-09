@@ -65,6 +65,11 @@ public class Board extends JComponent implements KeyListener {
 
         if (hero.isAlive) {
 
+            if (enemyObjects.size() == 0) {
+                graphics.setColor(Color.BLACK);
+                graphics.setFont(new Font("TimesRoman", Font.PLAIN, 18));
+                graphics.drawString(hero.wonGame(), 120, 360);
+            }
 
             // here you have a 720x720 canvas
             for (GameObject gameObject : gameObjects) {
@@ -83,19 +88,19 @@ public class Board extends JComponent implements KeyListener {
             if (skelet2.isAlive) {
                 skelet2.draw(graphics);
                 if (skelet1.isFighting) {
-                    graphics.drawString(skelet2.toString(), 220, 850);
+                    graphics.drawString(skelet2.toString(), 220, 790);
                 }
             }
             if (skelet3.isAlive) {
                 skelet3.draw(graphics);
                 if (skelet1.isFighting) {
-                    graphics.drawString(skelet3.toString(), 220, 820);
+                    graphics.drawString(skelet3.toString(), 220, 790);
                 }
             }
             if (boss.isAlive) {
                 boss.draw(graphics);
                 if (skelet1.isFighting) {
-                    graphics.drawString(boss.toString(), 220, 880);
+                    graphics.drawString(boss.toString(), 220, 790);
                 }
             }
             hero.draw(graphics);
@@ -103,7 +108,7 @@ public class Board extends JComponent implements KeyListener {
         } else {
             graphics.setColor(Color.BLACK);
             graphics.setFont(new Font("TimesRoman", Font.PLAIN, 18));
-            graphics.drawString(hero.endOfGame(), 20, 260);
+            graphics.drawString(hero.lostGame(), 120, 360);
         }
     }
 
@@ -124,9 +129,11 @@ public class Board extends JComponent implements KeyListener {
             hero.Move(1, 0, gameObjects);
         } else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 
-            for (Characters enemy : enemyObjects) {
-                if (enemy.posX == hero.posX && enemy.posY == hero.posY) {
-                    Battle(hero, enemy);
+            if (enemyObjects.size() != 0) {
+                for (Characters enemy : enemyObjects) {
+                    if (enemy.posX == hero.posX && enemy.posY == hero.posY) {
+                        Battle(hero, enemy);
+                    }
                 }
             }
         }
@@ -140,10 +147,11 @@ public class Board extends JComponent implements KeyListener {
     public void Battle(Characters attacker, Characters defender) {
         attacker.isFighting = true;
         defender.isFighting = true;
+        paint(getGraphics());
         System.out.println("fighting with " + defender);
-        attacker.Strike(attacker, defender);
+        attacker.Strike(attacker, defender, enemyObjects);
         if (defender.isAlive) {
-            defender.Strike(defender, attacker);
+            defender.Strike(defender, attacker, enemyObjects);
         }
         paint(getGraphics());
         defender.isFighting = false;
