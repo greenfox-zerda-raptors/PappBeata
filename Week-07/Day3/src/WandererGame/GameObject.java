@@ -51,7 +51,7 @@ public class GameObject {
     }
 
     public String endOfGame() {
-        return ("Hero is dead\nGame over!");
+        return ("Hero is dead     Game over!");
     }
 
 }

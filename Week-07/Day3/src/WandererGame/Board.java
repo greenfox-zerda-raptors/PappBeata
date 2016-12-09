@@ -68,6 +68,7 @@ public class Board extends JComponent implements KeyListener {
 
             // here you have a 720x720 canvas
             for (GameObject gameObject : gameObjects) {
+                graphics.setFont(new Font("TimesRoman", Font.PLAIN, 18));
                 gameObject.draw(graphics);
             }
 
@@ -100,6 +101,8 @@ public class Board extends JComponent implements KeyListener {
             hero.draw(graphics);
             graphics.drawString(hero.toString(), 220, 760);
         } else {
+            graphics.setColor(Color.BLACK);
+            graphics.setFont(new Font("TimesRoman", Font.PLAIN, 18));
             graphics.drawString(hero.endOfGame(), 20, 260);
         }
     }
