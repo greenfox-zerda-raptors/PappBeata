@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Board extends JComponent implements KeyListener {
 
     public ArrayList<GameObject> gameObjects = new ArrayList<>();
+    public ArrayList<Characters> enemyObjects = new ArrayList<>();
     private final Hero hero;
     private final Boss boss;
     private final Monster skelet1;
@@ -30,7 +31,6 @@ public class Board extends JComponent implements KeyListener {
                 {0, 1, 1, 1, 0, 0, 0, 0, 1, 0},
                 {0, 0, 0, 1, 0, 1, 1, 0, 1, 0}};
 
-
         //drawing the gameboard acc to hardcode board template as shown above
         for (int i = 0; i < tilesArray.length; i++) {
             for (int j = 0; j < tilesArray[i].length; j++) {
@@ -44,9 +44,13 @@ public class Board extends JComponent implements KeyListener {
             }
         }
         boss = new Boss(5, 5);
+        enemyObjects.add(boss);
         skelet1 = new Monster(7, 8, "skelet1");
+        enemyObjects.add(skelet1);
         skelet2 = new Monster(2, 6, "skelet2");
+        enemyObjects.add(skelet2);
         skelet3 = new Monster(8, 3, "skelet3");
+        enemyObjects.add(skelet3);
         hero = new Hero(0, 0);
         // set the size of your draw board
         setPreferredSize(new Dimension(720, 900));
@@ -56,12 +60,19 @@ public class Board extends JComponent implements KeyListener {
     @Override
     public void paint(Graphics graphics) {
 
+        graphics.setColor(Color.lightGray);
+        graphics.fillRect(0, 0, 720, 900);
+
         if (hero.isAlive) {
+
 
             // here you have a 720x720 canvas
             for (GameObject gameObject : gameObjects) {
                 gameObject.draw(graphics);
             }
+
+            graphics.setColor(Color.BLACK);
+
             if (skelet1.isAlive) {
                 skelet1.draw(graphics);
                 if (skelet1.isFighting) {
@@ -91,7 +102,6 @@ public class Board extends JComponent implements KeyListener {
         } else {
             graphics.drawString(hero.endOfGame(), 20, 260);
         }
-
     }
 
     @Override
@@ -110,11 +120,30 @@ public class Board extends JComponent implements KeyListener {
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
             hero.Move(1, 0, gameObjects);
         } else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+
+            for (Characters enemy : enemyObjects) {
+                if (enemy.posX == hero.posX && enemy.posY == hero.posY) {
+                    Battle(hero, enemy);
+                }
+            }
         }
         paint(getGraphics());
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
+    }
+
+    public void Battle(Characters attacker, Characters defender) {
+        attacker.isFighting = true;
+        defender.isFighting = true;
+        System.out.println("fighting with " + defender);
+        attacker.Strike(attacker, defender);
+        if (defender.isAlive) {
+            defender.Strike(defender, attacker);
+        }
+        paint(getGraphics());
+        defender.isFighting = false;
+        attacker.isFighting = false;
     }
 }

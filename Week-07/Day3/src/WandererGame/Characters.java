@@ -1,5 +1,6 @@
 package WandererGame;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Characters extends GameObject {
@@ -8,6 +9,7 @@ public class Characters extends GameObject {
     public int maxHP;
     public int currDP;
     public int currSP;
+    public int currSV;
     public boolean isAlive = true;
     public boolean isFighting = false;
     Random random = new Random();
@@ -73,8 +75,43 @@ public class Characters extends GameObject {
         super(filename, posX, posY, name);
     }
 
-    public Characters() {
-        super(null, 0, 0, "empty");
+    public void Move(int xDirection, int yDirection, ArrayList<GameObject> gameObjects) {
+        if (xDirection == 1) {
+            this.setImage(rightImg);
+            if (this.posX != 9 && !gameObjects.get(posX + 1 + 10 * posY).isRestrictField()) {
+                this.posX += 1;
+            }
+        } else if (xDirection == -1) {
+            this.setImage(leftImg);
+            if (this.posX != 0 && !gameObjects.get(posX - 1 + 10 * posY).isRestrictField()) {
+                this.posX -= 1;
+            }
+        } else if (yDirection == 1) {
+            this.setImage(downImg);
+            if (this.posY != 9 && !gameObjects.get(posX + 10 * (posY + 1)).isRestrictField()) {
+                this.posY += 1;
+            }
+        } else if (yDirection == -1) {
+            this.setImage(upImg);
+            if (this.posY != 0 && !gameObjects.get(posX + 10 * (posY - 1)).isRestrictField()) {
+                this.posY -= 1;
+            }
+        }
+    }
+
+    public void Strike(Characters attacker, Characters defender) {
+        attacker.currSV = attacker.currSP + d * 2;
+        if (attacker.currSV > defender.currDP) {
+            defender.currHP -= attacker.currSV - defender.currDP;
+        }
+        if (attacker.currHP <= 0) {
+            attacker.isAlive = false;
+            System.out.println("attacker dead");
+        }
+        if (defender.currHP <= 0) {
+            defender.isAlive = false;
+            System.out.println("defender dead");
+        }
     }
 
     public String toString() {
