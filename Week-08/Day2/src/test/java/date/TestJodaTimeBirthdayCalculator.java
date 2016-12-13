@@ -90,7 +90,7 @@ public class TestJodaTimeBirthdayCalculator {
             Interval interval = new Interval(now, new DateTime(now.getYear() + 1, date.getMonthOfYear(), date.getDayOfMonth(), 12, 0, 0));
             expected = (int) interval.toDuration().getStandardDays();
         } else {
-            DateTime end = new DateTime(now.getYear(), date.getMonthOfYear(), date.getDayOfMonth(), now.getHourOfDay(), now.getMinuteOfHour(), now.getSecondOfMinute());
+            DateTime end = new DateTime(now.getYear() + 1, date.getMonthOfYear(), date.getDayOfMonth(), now.getHourOfDay(), now.getMinuteOfHour(), now.getSecondOfMinute() + 1);
             Interval interval = new Interval(now, end);
             expected = (int) interval.toDuration().getStandardDays();
         }

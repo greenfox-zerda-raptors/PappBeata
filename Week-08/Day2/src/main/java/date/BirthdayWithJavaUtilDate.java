@@ -1,31 +1,53 @@
 package date;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
 public final class BirthdayWithJavaUtilDate implements BirthdayCalculator<Date> {
 
+    public Date today = Calendar.getInstance().getTime();
+
     @Override
     public Date parseDate(String str) {
         // TODO - return with the parsed date; format is: yyyy-MM-dd
-        return null;
+        Date date = null;
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            date = df.parse(str);
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        return date;
     }
 
     @Override
     public String printMonthAndDay(Date date) {
         // TODO - return the date formatted: month & day (MM. dd.)
-        return null;
+        String formattedDate = null;
+        formattedDate = new SimpleDateFormat("MM. dd.").format(date);
+        return String.valueOf(formattedDate);
     }
 
     @Override
     public boolean isAnniversaryToday(Date date) {
         // TODO - return with true if today is the same month+day as date
-        return false;
+
+        return printMonthAndDay(date).equals(printMonthAndDay(today));
     }
 
     @Override
     public int calculateAgeInYears(Date birthday) {
         // TODO - return how many years age the input date 'birthday' was
+
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int age;
+       // age = year - birthday.get(Calendar.YEAR);
+        //printMonthAndDay(birthday) (printMonthAndDay(today))
+
         return -1;
     }
 
