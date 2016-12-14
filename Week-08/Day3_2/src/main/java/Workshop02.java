@@ -36,7 +36,9 @@ public class Workshop02 {
             QueryBuilder<Account, String> queryBuilder = accountDao.queryBuilder();
             System.out.println(accountDao.queryForAll());
             List<Account> accountsList = accountDao.queryBuilder().orderBy("name", true).query();
-            System.out.println(accountsList);
+            for (Account item : accountsList) {
+                System.out.println(item);
+            }
         } catch (
                 SQLException e)
 
