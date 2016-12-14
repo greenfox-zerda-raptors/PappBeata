@@ -8,6 +8,7 @@ import com.j256.ormlite.table.TableUtils;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Workshop02 {
     public static void main(String[] args) throws SQLException {
@@ -34,6 +35,8 @@ public class Workshop02 {
         try {
             QueryBuilder<Account, String> queryBuilder = accountDao.queryBuilder();
             System.out.println(accountDao.queryForAll());
+            List<Account> accountsList = accountDao.queryBuilder().orderBy("name", true).query();
+            System.out.println(accountsList);
         } catch (
                 SQLException e)
 
