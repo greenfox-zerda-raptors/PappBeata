@@ -1,7 +1,6 @@
 package date;
 
 import org.joda.time.LocalDate;
-import org.joda.time.LocalDateTime;
 import org.joda.time.Years;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -40,12 +39,14 @@ public class BirthdayWithJodaTime implements BirthdayCalculator<LocalDate> {
     public int calculateAgeInYears(LocalDate birthday) {
         // TODO - return how many years age the input date 'birthday' was
         int age;
-        LocalDateTime now = LocalDateTime.now();
-        age = now.getYear() - birthday.getYear();
-        if (now.getMonthOfYear() == birthday.getMonthOfYear() && birthday.getDayOfMonth() > now.getDayOfMonth() || (birthday.getMonthOfYear() > now.getMonthOfYear())) {
-            age--;
+        LocalDate dateNow = new LocalDate();
+        try {
+            Years ageY = Years.yearsBetween(birthday, dateNow);
+            age = Integer.parseInt(ageY.toString());
+            return age;
+        } catch (Exception ex) {
+            return 0;
         }
-        return age;
     }
 
     @Override
