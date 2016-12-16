@@ -6,9 +6,7 @@ public class Scanner {
 
     public String Scan() {
 
-        com.bap.todo2.Tasklist newTasklist = new com.bap.todo2.Tasklist();
-
-        String input = userInput.nextLine();
+         String input = userInput.nextLine();
         return input;
     }
 

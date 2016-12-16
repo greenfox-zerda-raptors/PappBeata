@@ -12,11 +12,11 @@ public class App {
 
         new Initiate();
 
-        //read file
-
         char cmd = '0';
         Scanner objScan = new Scanner();
         Commands objCommands = new Commands();
+
+
 
         while (cmd != 'q') {
 

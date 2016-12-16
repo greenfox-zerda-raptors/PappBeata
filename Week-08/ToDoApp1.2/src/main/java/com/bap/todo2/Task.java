@@ -10,16 +10,19 @@ import java.sql.SQLException;
 @DatabaseTable(tableName = "task")
 public class Task {
 
+    @DatabaseField(generatedId = true)
+    int taskId;
     @DatabaseField(canBeNull = false)
     String taskName;
     @DatabaseField
     boolean completed = false;
-    @DatabaseField(generatedId = true)
-    int taskId;
     // @DatabaseField
     Date dueDate;
     @DatabaseField(useGetSet = true)
     int priority;
+    @DatabaseField(foreign = true)
+    int userId;
+
 
     public String getTaskName() {
         return taskName;
