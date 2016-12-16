@@ -15,7 +15,6 @@ public class Commands {
 
     Dao<Task, String> taskDao;
     Tasklist objTasklist;
-    //private PreparedUpdate<Task> preparedUpdate;
     private UpdateBuilder<Task, String> updateBuilder;
     Task nextToDo;
 
@@ -76,7 +75,7 @@ public class Commands {
         try {
             QueryBuilder<Task, String> queryBuilder = taskDao.queryBuilder();
             System.out.println(taskDao.queryForAll());
-            List<Task> taskList = taskDao.queryBuilder().orderBy("taskName", true).query();
+            List<Task> taskList = taskDao.queryBuilder().orderBy("taskId", true).query();
             for (Task item : taskList) {
                 System.out.println(item);
             }

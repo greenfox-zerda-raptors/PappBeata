@@ -76,7 +76,7 @@ public class Task {
     }
 
     public String toString() {
-        return String.format("%d %s %s %d", taskId, toStringCompleted(), taskName, priority);
+        return String.format("%d %s %s  prio %d", taskId, toStringCompleted(), taskName, priority);
     }
 
 
