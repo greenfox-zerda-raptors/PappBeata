@@ -20,9 +20,6 @@ public class Task {
     Date dueDate;
     @DatabaseField(useGetSet = true)
     int priority;
-    @DatabaseField(foreign = true)
-    int userId;
-
 
     public String getTaskName() {
         return taskName;
@@ -81,7 +78,6 @@ public class Task {
     public String toString() {
         return String.format("%d %s %s  prio %d", taskId, toStringCompleted(), taskName, priority);
     }
-
 
     public String toStringCompleted() {
         if (completed) {

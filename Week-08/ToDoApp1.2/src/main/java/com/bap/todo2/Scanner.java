@@ -6,7 +6,7 @@ public class Scanner {
 
     public String Scan() {
 
-         String input = userInput.nextLine();
+        String input = userInput.nextLine();
         return input;
     }
 

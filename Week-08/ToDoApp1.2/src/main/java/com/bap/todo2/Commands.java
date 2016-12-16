@@ -14,9 +14,11 @@ import java.util.List;
 public class Commands {
 
     Dao<Task, String> taskDao;
-    Tasklist objTasklist;
+    Dao<Users, String> usersDao;
     private UpdateBuilder<Task, String> updateBuilder;
+    private UpdateBuilder<Users, String> updateBuilderU;
     Task nextToDo;
+
 
     public Commands() throws SQLException {
 
@@ -25,14 +27,14 @@ public class Commands {
         taskDao = DaoManager.createDao(connectionSource, Task.class);
         TableUtils.createTableIfNotExists(connectionSource, Task.class);
         updateBuilder = taskDao.updateBuilder();
-
-        objTasklist = new Tasklist();
+        usersDao = DaoManager.createDao(connectionSource, Users.class);
+        TableUtils.createTableIfNotExists(connectionSource, Users.class);
+        updateBuilderU = usersDao.updateBuilder();
     }
 
     public void addItem(String inp) throws SQLException {
         nextToDo = new Task(inp);
         taskDao.create(nextToDo);
-        objTasklist.add(nextToDo);
     }
 
     public void setPrio(int inp) throws SQLException {
@@ -45,14 +47,11 @@ public class Commands {
     }
 
     public void removeItem(String inp) throws SQLException {
-        nextToDo = objTasklist.get(Integer.parseInt(inp) - 1);
         taskDao.delete(nextToDo);
-        objTasklist.remove(Integer.parseInt(inp) - 1);
         System.out.println("Task " + inp + " removed");
     }
 
     public void complete(String inp) throws SQLException {
-        objTasklist.get(Integer.parseInt(inp) - 1).completed = true;
         System.out.println("Task " + inp + " completed");
         taskDao.update(nextToDo);
     }
@@ -74,7 +73,6 @@ public class Commands {
     public void queryTasks() {
         try {
             QueryBuilder<Task, String> queryBuilder = taskDao.queryBuilder();
-            System.out.println(taskDao.queryForAll());
             List<Task> taskList = taskDao.queryBuilder().orderBy("taskId", true).query();
             for (Task item : taskList) {
                 System.out.println(item);
@@ -82,5 +80,27 @@ public class Commands {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public boolean userExists(String userN) throws SQLException {
+        QueryBuilder userQb = usersDao.queryBuilder();
+        userQb.setCountOf(true);
+        userQb.setWhere(userQb.where().eq("userName", userN));
+        Long count = usersDao.countOf(userQb.prepare());
+        //if (userQb.where().eq("userName", userN).query()..exists(userQb)) {
+        if (count == 0) {
+            usersDao.create(new Users(userN));
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean passwordCorrect(String password) {
+        //    if (doesExist usersDao.queryBuilder(password)){
+        return true;
+      /*  } else{
+            return false;
+        }*/
     }
 }

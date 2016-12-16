@@ -16,5 +16,4 @@ dependencies {
     compile group: 'com.h2database', name: 'h2', version: '1.4.193'
     compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.5'
     compile group: 'joda-time', name: 'joda-time', version: '2.9.6'
-    
 }

@@ -9,18 +9,30 @@ public class App {
     public static void main(String[] args) throws SQLException {
 
         System.setProperty(LocalLog.LOCAL_LOG_LEVEL_PROPERTY, "FATAL");
+        
+        Commands objCommands = new Commands();
 
+        System.out.println("Login name:\n");
+        Scanner objScan = new Scanner();
+        String lastInput = objScan.Scan();
+
+        if (objCommands.userExists(lastInput)) {
+            System.out.println("\nPassword:\n");
+            //  if (!passwordCorrect) {
+            System.out.println("\nPassword not correct, please try again!\n");
+            //}
+        } else {
+            System.out.println("\nYou seem to be a new user, please set your password: \n");
+            String pswInput = objScan.Scan();
+            new Users(lastInput, pswInput);
+        }
         new Initiate();
 
         char cmd = '0';
-        Scanner objScan = new Scanner();
-        Commands objCommands = new Commands();
-
-
 
         while (cmd != 'q') {
 
-            String lastInput = objScan.Scan();
+            lastInput = objScan.Scan();
 
             cmd = lastInput.charAt(0);
 
@@ -31,7 +43,6 @@ public class App {
                 if (intInput == 1 || intInput == 2 || intInput == 3) {
                     objCommands.setPrio(intInput);
                 }
-
 
             } else if (cmd == 'h') {
                 objCommands.help();
@@ -47,12 +58,7 @@ public class App {
 
             } else {
                 System.out.println("\nProgram closes.");
-
             }
-
-            //output into file
         }
     }
-
-
 }
