@@ -1,9 +1,14 @@
 package com.greenfox;
 
+//@Component
 public class Todo {
+    // @Autowired(required = false)
     int id;
+    //@Autowired(required = false)
     String title;
+    // @Autowired(required = false)
     Boolean urgent;
+    // @Autowired(required = false)
     Boolean done;
 
     public Todo(int id, String title, Boolean urgent, Boolean done) {
