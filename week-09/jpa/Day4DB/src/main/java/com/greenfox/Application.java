@@ -50,4 +50,39 @@ public class Application {
             log.info("");
         };
     }
+
+    @Bean
+    public CommandLineRunner demo(OrderRepository repository) {
+        return (args) -> {
+            // save a couple of customers
+            repository.save(new Order("Jack", "Bauer"));
+            repository.save(new Order("Chloe", "O'Brian"));
+            repository.save(new Order("Kim", "Bauer"));
+            repository.save(new Order("David", "Palmer"));
+            repository.save(new Order("Michelle", "Dessler"));
+
+            // fetch all customers
+            log.info("Orders found with findAll():");
+            log.info("-------------------------------");
+            for (Order order : repository.findAll()) {
+                log.info(order.toString());
+            }
+            log.info("");
+
+            // fetch an individual customer by ID
+            Order order = repository.findOne(1L);
+            log.info("Customer found with findOne(1L):");
+            log.info("--------------------------------");
+            log.info(order.toString());
+            log.info("");
+
+            // fetch customers by last name
+            log.info("Customer found with findByLastName('Bauer'):");
+            log.info("--------------------------------------------");
+            for (Order bauer : repository.findByName("Bauer")) {
+                log.info(bauer.toString());
+            }
+            log.info("");
+        };
+    }
 }
