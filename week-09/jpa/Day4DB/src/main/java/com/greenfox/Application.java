@@ -17,7 +17,7 @@ public class Application {
     }
 
     @Bean
-    public CommandLineRunner demo(CustomerRepository repository) {
+    public CommandLineRunner demoCust(CustomerRepository repository) {
         return (args) -> {
             // save a couple of customers
             repository.save(new Customer("Jack", "Bauer"));
@@ -25,6 +25,10 @@ public class Application {
             repository.save(new Customer("Kim", "Bauer"));
             repository.save(new Customer("David", "Palmer"));
             repository.save(new Customer("Michelle", "Dessler"));
+
+            for (Customer customer : repository.findByLastName("Bauer")) {
+                log.info(customer.toString());
+            }
 
             // fetch all customers
             log.info("Customers found with findAll():");
@@ -52,37 +56,38 @@ public class Application {
     }
 
     @Bean
-    public CommandLineRunner demo(OrderRepository repository) {
+    public CommandLineRunner demoProd(ProductRepository repository) {
         return (args) -> {
-            // save a couple of customers
-            repository.save(new Order("Jack", "Bauer"));
-            repository.save(new Order("Chloe", "O'Brian"));
-            repository.save(new Order("Kim", "Bauer"));
-            repository.save(new Order("David", "Palmer"));
-            repository.save(new Order("Michelle", "Dessler"));
+            // save a couple of products
+            repository.save(new Product("Christmas Tree", 8000));
+            repository.save(new Product("Red balls - sixpack", 500));
+            repository.save(new Product("Chocolate Santa", 300));
+            repository.save(new Product("Present box", 450));
 
-            // fetch all customers
-            log.info("Orders found with findAll():");
+            // fetch all products
+            log.info("Products found with findAll():");
             log.info("-------------------------------");
-            for (Order order : repository.findAll()) {
-                log.info(order.toString());
+            for (Product product : repository.findAll()) {
+                log.info(product.toString());
             }
             log.info("");
 
             // fetch an individual customer by ID
-            Order order = repository.findOne(1L);
-            log.info("Customer found with findOne(1L):");
+            Product product = repository.findOne(1L);
+            log.info("Product found with findOne(1L):");
             log.info("--------------------------------");
-            log.info(order.toString());
+            log.info(product.toString());
             log.info("");
 
-            // fetch customers by last name
-            log.info("Customer found with findByLastName('Bauer'):");
+            // fetch products by name
+            log.info("Product found with findByName('Chocolate Santa'):");
             log.info("--------------------------------------------");
-            for (Order bauer : repository.findByName("Bauer")) {
-                log.info(bauer.toString());
+            for (Product santa : repository.findByName("Chocolate Santa")) {
+                log.info(santa.toString());
             }
             log.info("");
         };
     }
+
+
 }

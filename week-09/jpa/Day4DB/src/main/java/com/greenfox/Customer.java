@@ -1,16 +1,19 @@
 package com.greenfox;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Set;
 
+@Getter
+@Setter
+@Builder
 @AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "customers")
-@Data
 public class Customer {
 
     @Id
@@ -23,6 +26,13 @@ public class Customer {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
+    protected Customer() {
+    }
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "customers_phones")
+    private Set<PhoneNumber> phoneNumbers;
 
     @Override
     public String toString() {

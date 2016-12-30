@@ -8,7 +8,4 @@ public interface OrderRepository extends CrudRepository<Order, Long> {
 
     List<Order> findByName(String name);
 
-   /* List<Order> findByCustomer(Customer customer);
-
-    List<Order> findById(Long id);*/
 }

@@ -18,5 +18,19 @@ public class Product {
     private long id;
 
     private String name;
+    private Integer price;
 
+    @Override
+    public String toString() {
+        return String.format(
+                "Customer[id=%d, name='%s', price=%d]", id, name, price);
+    }
+
+    public Product(String name, Integer price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    protected Product() {
+    }
 }
