@@ -1,13 +1,12 @@
 package com.greenfox;
 
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Getter
+//@Getter
 @Setter
 @EqualsAndHashCode
 @Table(name = "products")
@@ -15,7 +14,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    public Long id;
 
     private String name;
     private Integer price;

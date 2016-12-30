@@ -15,7 +15,7 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    public Long id;
     private String name;
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -26,12 +26,15 @@ public class Order {
     private Customer customer;
 
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, fetch = FetchType.EAGER, mappedBy = "order")
-    private List<Item> items;
+    public List<Item> items;
 
     protected Order() {
     }
 
-    ;
+    public Order(String name, Customer customer) {
+        this.name = name;
+        this.customer = customer;
+    }
 
     // reference to the customer table
 }

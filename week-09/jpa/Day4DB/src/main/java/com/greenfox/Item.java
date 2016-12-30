@@ -1,6 +1,9 @@
 package com.greenfox;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -8,14 +11,13 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "items")
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    public Long id;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id")
@@ -26,4 +28,15 @@ public class Item {
     @ManyToOne
     @JoinColumn(name = "order_id")
     private Order order;
+
+    public Item(Product product, int quantity, Order order) {
+        this.product = product;
+        this.quantity = quantity;
+        this.order = order;
+    }
+
+    protected Item() {
+    }
+
+
 }
