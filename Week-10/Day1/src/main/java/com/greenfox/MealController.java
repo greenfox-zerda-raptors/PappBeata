@@ -20,7 +20,7 @@ public class MealController {
         this.mealService = mealService;
     }
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String index(Model model) {
         model.addAttribute("mealService", mealService.getMeals());
         return "index";

@@ -16,10 +16,9 @@ public class Meal {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer id;
 
-    String type;
-    String description;
-    Integer calories;
-
+    private String type;
+    private String description;
+    private Integer calories;
     private LocalDate date;
 
     public Meal(String type, String description, Integer calories) {

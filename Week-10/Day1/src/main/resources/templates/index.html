@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../static/index.css" th:href="@{/index.css}"/>
+<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Raleway" rel="stylesheet"/>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Title</title>
 </head>
 <body>
 
+<h1>List of Meals</h1>
+
 <ul>
-    <li th:each="item:${mailService}" th:text="${item.description}"></li>
+    <!--/*@thymesVar id="fakeMealStore" type="com.greenfox.MealService"*/-->
+    <!--/*@thymesVar id="description" type="com.greenfox.Meal"*/-->
+    <li th:each="item:${fakeMealStore}" th:text="${item.description}"></li>
 </ul>
 
 </body>
