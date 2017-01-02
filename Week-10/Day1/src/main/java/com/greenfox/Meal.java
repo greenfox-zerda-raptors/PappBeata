@@ -17,7 +17,7 @@ public class Meal {
     public Integer id;
 
     private String type;
-    private String description;
+    public String description;
     private Integer calories;
     private LocalDate date;
 

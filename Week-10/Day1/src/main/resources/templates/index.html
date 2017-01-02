@@ -11,9 +11,9 @@
 <h1>List of Meals</h1>
 
 <ul>
-    <!--/*@thymesVar id="fakeMealStore" type="com.greenfox.MealService"*/-->
+    <!--/*@thymesVar id="mealService" type="com.greenfox.MealService"*/-->
     <!--/*@thymesVar id="description" type="com.greenfox.Meal"*/-->
-    <li th:each="item:${fakeMealStore}" th:text="${item.description}"></li>
+    <li th:each="item:${mealService}" th:text="${item.description}"></li>
 </ul>
 
 </body>
