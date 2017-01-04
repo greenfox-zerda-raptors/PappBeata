@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Post added</h1>
+
+<table>
+    <tr>
+        <td><label>Your Comment:</label></td>
+    </tr>
+    <tr>
+        <!--/*@thymesVar id="post" type="com.greenfox.reddit.Post"*/-->
+        <td th:text="${post.content}"></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/posts/">Back to the Overview</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
