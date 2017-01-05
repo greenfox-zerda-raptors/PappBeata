@@ -8,7 +8,6 @@
 
 <h1>Add post here</h1>
 
-<!--/*@thymesVar id="postService" type="com.greenfox.reddit.PostService"*/-->
 <!--/*@thymesVar id="post" type="com.greenfox.reddit.Post"*/-->
 <form action="#" th:action="@{/posts/add}" th:object="${post}" th:method="post">
     <table>
@@ -17,13 +16,13 @@
         </tr>
         <tr>
             <td>
-                <!--/*@thymesVar id="content" type="com.greenfox.reddit.Post"*/-->
                 <input type="text" th:field="*{content}"/>
             </td>
         </tr>
         <tr>
             <td>
-                <input type="submit" value="submit"/>Update<input type="reset" value="Reset"/>
+                <input type="submit" value="Submit"/>
+                <input type="reset" value="Reset"/>
             </td>
         </tr>
     </table>

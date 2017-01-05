@@ -22,8 +22,10 @@ public class Post {
 
     public Post(String content) {
         this.content = content;
+        date = new Date();
     }
 
     public Post() {
+        date = new Date();
     }
 }
