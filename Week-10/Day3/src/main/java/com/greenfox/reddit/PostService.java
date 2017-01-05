@@ -27,4 +27,16 @@ public class PostService {
 
     public void updatePost() {
     }
+
+    public void upVote(Integer id) {
+        Post post = postRepo.findOne(id);
+        post.setScore(post.getScore() + 1);
+        postRepo.save(post);
+    }
+
+    public void downVote(Integer id) {
+        Post post = postRepo.findOne(id);
+        post.setScore(post.getScore() - 1);
+        postRepo.save(post);
+    }
 }
