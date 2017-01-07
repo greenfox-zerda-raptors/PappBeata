@@ -2,7 +2,6 @@ package com.greenfox.reddit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,13 @@ public class PostService {
     @Autowired
     private PostRepository postRepo;
 
+    @Autowired
+    private UserRepository userRepo;
+
+
     public List<Post> getPosts() {
+
+//        return postRepo.findAllOrderedByScore(new PageRequest(1, 10));
         List<Post> list = new ArrayList<>();
         for (Post item : postRepo.findAll()) {
             list.add(item);
@@ -21,8 +26,10 @@ public class PostService {
         return list;
     }
 
-    public void addPost(@RequestParam String newPost) {
-        postRepo.save(new Post(newPost));
+    public void addPost(String newPost) {
+        Post post = new Post(newPost);
+        post.setUser(userRepo.findById(1));
+        postRepo.save(post);
     }
 
     public void updatePost() {

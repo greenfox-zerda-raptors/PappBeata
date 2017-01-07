@@ -17,15 +17,20 @@ public class Post {
     public Integer id;
 
     String content;
+    //@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     Date date;
     Integer score = 0;
 
-    public Post(String content) {
-        this.content = content;
-        date = new Date();
-    }
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    User user;
 
     public Post() {
         date = new Date();
+    }
+
+    public Post(String content) {
+        this();
+        this.content = content;
     }
 }

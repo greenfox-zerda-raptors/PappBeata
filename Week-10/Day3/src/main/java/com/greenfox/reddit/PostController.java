@@ -12,10 +12,11 @@ public class PostController {
     @Autowired
     PostService postService;
 
+
     @RequestMapping(value = {"/", ""})
     public String index(Model model) {
         model.addAttribute("posts", postService.getPosts());
-        model.addAttribute("date_format", "dd/MM/yyyy");
+        //model.addAttribute("date_format", "dd/MM/yyyy");
         return "index";
     }
 
@@ -41,6 +42,5 @@ public class PostController {
     public String downVote(@PathVariable("postId") Integer id) {
         postService.downVote(id);
         return "redirect:/posts";
-
     }
 }
