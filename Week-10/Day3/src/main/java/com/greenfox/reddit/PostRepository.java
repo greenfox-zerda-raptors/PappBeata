@@ -1,8 +1,10 @@
 package com.greenfox.reddit;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface PostRepository extends CrudRepository<Post, Integer> {
+public interface PostRepository extends PagingAndSortingRepository<Post, Integer> {
 
-    //Page<Post> findAllOrderedByScore(Pageable pageable);
+    public Page<Post> findAllByOrderByScoreDesc(Pageable pageable);
 }

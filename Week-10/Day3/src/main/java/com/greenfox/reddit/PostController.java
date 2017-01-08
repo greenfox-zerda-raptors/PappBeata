@@ -1,6 +1,7 @@
 package com.greenfox.reddit;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,12 +11,12 @@ import org.springframework.web.bind.annotation.*;
 public class PostController {
 
     @Autowired
-    PostService postService;
+    PostServiceImpl postServiceImpl;
 
 
     @RequestMapping(value = {"/", ""})
-    public String index(Model model) {
-        model.addAttribute("posts", postService.getPosts());
+    public String index(Model model, Pageable pageable) {
+        model.addAttribute("posts", postServiceImpl.getAllPosts(pageable));
         //model.addAttribute("date_format", "dd/MM/yyyy");
         return "index";
     }
@@ -28,19 +29,19 @@ public class PostController {
 
     @PostMapping(value = "/add")
     public String addContentSubmit(@ModelAttribute Post post) {
-        postService.addPost(post.content);
+        postServiceImpl.addPost(post.content);
         return "submit";
     }
 
     @RequestMapping(value = "/{postId}/upVote", method = RequestMethod.GET)
     public String upVote(@PathVariable("postId") Integer id) {
-        postService.upVote(id);
+        postServiceImpl.upVote(id);
         return "redirect:/posts";
     }
 
     @RequestMapping(value = "/{postId}/downVote", method = RequestMethod.GET)
     public String downVote(@PathVariable("postId") Integer id) {
-        postService.downVote(id);
+        postServiceImpl.downVote(id);
         return "redirect:/posts";
     }
 }
