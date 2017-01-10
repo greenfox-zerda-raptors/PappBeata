@@ -1,10 +1,10 @@
-package com.greenfox;
+package com.greenfox.entity;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -16,19 +16,19 @@ public class Meal {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer id;
 
-    private String type;
+    public String type;
     public String description;
-    private Integer calories;
-    private LocalDate date;
+    public Integer calories;
+    private Date date;
 
     public Meal(String type, String description, Integer calories) {
+        this();
         this.type = type;
         this.description = description;
         this.calories = calories;
-        //to check
-        date = LocalDate.now();
     }
 
     protected Meal() {
+        date = new Date();
     }
 }
