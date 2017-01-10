@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../static/index.css" th:href="@{/index.css}"/>
+<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Raleway" rel="stylesheet"/>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body class="bgimg">
+
+<h1>Edit meal </h1>
+
+<form action="#" th:action="@{/caloriecounter/editMeal}" th:object="${meal}" th:method="post">
+    <table>
+        <tr>
+            <td><label>Change meal description:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" th:field="*{description}"/>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Change meal type:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" th:field="*{type}"/>
+            </td>
+        </tr>
+        <tr>
+            <td><label>Change meal calories:</label></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" th:field="*{calories}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit"/>
+                <input type="reset" value="Reset"/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

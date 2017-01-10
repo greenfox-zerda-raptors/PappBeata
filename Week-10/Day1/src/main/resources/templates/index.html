@@ -4,17 +4,25 @@
 <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Raleway" rel="stylesheet"/>
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>Meals</title>
 </head>
-<body>
+<body class="bgimg">
 
 <h1>List of Meals</h1>
 
-<ul>
-    <!--/*@thymesVar id="mealService" type="com.greenfox.MealService"*/-->
-    <!--/*@thymesVar id="description" type="com.greenfox.Meal"*/-->
-    <li th:each="item:${mealService}" th:text="${item.description}"></li>
-</ul>
+<table>
+    <tr th:each="item:${meals}">
+        <td th:text="${item.type}"></td>
+        <td th:text="${item.description}"></td>
+        <td th:text="${item.calories}"></td>
+        <td th:text="${item.date}"></td>
+        <td><input type="submit" name="edit" value="Edit" th:href="@{'/caloriecounter/{id}/edit'(id=${meal.id})}"
+                   th:attr="name=${meal.description}"/></td>
+        <td><input type="submit" value="Delete"/></td>
+    </tr>
+</table>
+
+<a th:href="@{/caloriecounter/addMeal}" href="http://localhost:8080/caloriecounter/addMeal">Add new meal</a>
 
 </body>
 </html>

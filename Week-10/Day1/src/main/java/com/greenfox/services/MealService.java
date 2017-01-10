@@ -21,11 +21,11 @@ public class MealService {
         return mealRepo.findAllByOrderByDateDesc();
     }
 
+    public void addMeal(Meal meal) {
+        mealRepo.save(meal);
+    }
 
-/*    public void addMeal(Meal meal) {
-        if (meal.getId() == 0) {
-            meal.setId(fakeMealStore.size());
-        }
-        fakeMealStore.add(meal);
-    }*/
+    public void editMeal(Meal meal) {
+        mealRepo.save(meal);
+    }
 }

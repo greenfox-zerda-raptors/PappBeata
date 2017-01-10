@@ -14,7 +14,7 @@ public class Meal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Integer id;
+    public Long id;
 
     public String type;
     public String description;
@@ -28,7 +28,7 @@ public class Meal {
         this.calories = calories;
     }
 
-    protected Meal() {
+    public Meal() {
         date = new Date();
     }
 }
