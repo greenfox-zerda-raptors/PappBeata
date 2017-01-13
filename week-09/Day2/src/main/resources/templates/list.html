@@ -4,9 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Title</title>
 </head>
-<body>
-<h1>List of todos1</h1>
-<h1>List of todos2</h1>
+<h1>List of todos</h1>
 <ul>
     <li th:each="item:${todoService}" th:text="${item.title}"></li>
 </ul>

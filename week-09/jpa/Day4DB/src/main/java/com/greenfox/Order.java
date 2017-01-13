@@ -31,10 +31,9 @@ public class Order {
     protected Order() {
     }
 
-    public Order(String name, Customer customer, List<Item> items) {
+    public Order(String name, Customer customer) {
         this.name = name;
         this.customer = customer;
-        this.items = items;
     }
 
     // reference to the customer table

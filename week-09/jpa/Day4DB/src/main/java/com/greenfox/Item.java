@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 
@@ -19,7 +20,7 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id")
     private Product product;
 
@@ -27,8 +28,9 @@ public class Item {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private Order order;
+    public Order order;
 
+    @Autowired
     public Item(Product product, int quantity, Order order) {
         this.product = product;
         this.quantity = quantity;

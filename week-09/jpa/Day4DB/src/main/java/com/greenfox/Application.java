@@ -85,23 +85,29 @@ public class Application {
             }
             log.info("");
 
+            // save a couple of orders
+            repositoryOrd.save(new Order("Christmas shopping", repositoryCust.findOne(1L)));
+            repositoryOrd.save(new Order("Shopping missing items", repositoryCust.findOne(1L)));
+            repositoryOrd.save(new Order("Christmas presents Kim Bauer", repositoryCust.findOne(2L)));
+
             List<Item> items1 = new ArrayList<Item>();
             items1.add(new Item(repositoryProd.findOne(1L), 1, repositoryOrd.findOne(1L)));
             items1.add(new Item(repositoryProd.findOne(2L), 2, repositoryOrd.findOne(1L)));
             items1.add(new Item(repositoryProd.findOne(3L), 5, repositoryOrd.findOne(1L)));
             items1.add(new Item(repositoryProd.findOne(4L), 6, repositoryOrd.findOne(1L)));
 
+            repositoryOrd.findOne(1L).items = items1;
+
             List<Item> items2 = new ArrayList<Item>();
             items2.add(new Item(repositoryProd.findOne(3L), 2, repositoryOrd.findOne(2L)));
+
+            repositoryOrd.findOne(2L).items = items2;
 
             List<Item> items3 = new ArrayList<Item>();
             items3.add(new Item(repositoryProd.findOne(3L), 3, repositoryOrd.findOne(3L)));
             items3.add(new Item(repositoryProd.findOne(4L), 3, repositoryOrd.findOne(3L)));
 
-            // save a couple of orders
-            repositoryOrd.save(new Order("Christmas shopping", repositoryCust.findOne(1L), items1));
-            repositoryOrd.save(new Order("Shopping missing items", repositoryCust.findOne(1L), items2));
-            repositoryOrd.save(new Order("Christmas presents Kim Bauer", repositoryCust.findOne(2L), items3));
+            repositoryOrd.findOne(3L).items = items3;
 
             log.info("");
 
