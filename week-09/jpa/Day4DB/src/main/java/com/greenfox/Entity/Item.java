@@ -1,10 +1,9 @@
-package com.greenfox;
+package com.greenfox.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 
@@ -13,14 +12,13 @@ import javax.persistence.*;
 @Setter
 @Builder
 @AllArgsConstructor
-@Table(name = "items")
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id")
     private Product product;
 
@@ -30,7 +28,6 @@ public class Item {
     @JoinColumn(name = "order_id")
     public Order order;
 
-    @Autowired
     public Item(Product product, int quantity, Order order) {
         this.product = product;
         this.quantity = quantity;

@@ -1,6 +1,5 @@
-package com.greenfox;
+package com.greenfox.Entity;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,17 +9,19 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode
-@Table(name = "phone_numbers")
 public class PhoneNumber {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String value;
+    private Long phoneNr;
 
-    @ManyToMany(mappedBy = "phoneNumbers")
-    private Set<Customer> customers;
+    @ManyToMany(mappedBy = "phoneNumber")
+    private Set<Customer> customer;
+
+    public PhoneNumber(Long phoneNr) {
+        this.phoneNr = phoneNr;
+    }
 
 }

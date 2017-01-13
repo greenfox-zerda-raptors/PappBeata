@@ -1,4 +1,4 @@
-package com.greenfox;
+package com.greenfox.Entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +10,6 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@Table(name = "orders")
 public class Order {
 
     @Id
@@ -18,7 +17,6 @@ public class Order {
     public Long id;
     private String name;
 
-    @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 
     @OneToOne(fetch = FetchType.LAZY)
@@ -29,12 +27,13 @@ public class Order {
     public List<Item> items;
 
     protected Order() {
+        createdAt = new Date();
     }
 
     public Order(String name, Customer customer) {
+        this();
         this.name = name;
         this.customer = customer;
     }
 
-    // reference to the customer table
 }

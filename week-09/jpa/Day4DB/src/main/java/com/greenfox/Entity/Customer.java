@@ -1,4 +1,4 @@
-package com.greenfox;
+package com.greenfox.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,7 +13,6 @@ import java.util.Set;
 @Builder
 @AllArgsConstructor
 @Entity
-@Table(name = "customers")
 public class Customer {
 
     @Id
@@ -21,6 +20,10 @@ public class Customer {
     public Long id;
     private String firstName;
     private String lastName;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "customers_phones")
+    private Set<PhoneNumber> phoneNumber;
 
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
@@ -30,9 +33,6 @@ public class Customer {
     protected Customer() {
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "customers_phones")
-    private Set<PhoneNumber> phoneNumbers;
 
     @Override
     public String toString() {

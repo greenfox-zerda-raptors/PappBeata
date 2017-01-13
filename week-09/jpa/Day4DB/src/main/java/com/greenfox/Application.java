@@ -1,5 +1,13 @@
 package com.greenfox;
 
+import com.greenfox.Entity.Customer;
+import com.greenfox.Entity.Item;
+import com.greenfox.Entity.Order;
+import com.greenfox.Entity.Product;
+import com.greenfox.Repository.CustomerRepository;
+import com.greenfox.Repository.ItemRepository;
+import com.greenfox.Repository.OrderRepository;
+import com.greenfox.Repository.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -20,7 +28,7 @@ public class Application {
     }
 
     @Bean
-    public CommandLineRunner demo(CustomerRepository repositoryCust, ProductRepository repositoryProd, OrderRepository repositoryOrd) {
+    public CommandLineRunner demo(CustomerRepository repositoryCust, ProductRepository repositoryProd, OrderRepository repositoryOrd, ItemRepository repositoryItem) {
         return (args) -> {
             // save a couple of customers
             repositoryCust.save(new Customer("Jack", "Bauer"));
@@ -90,22 +98,32 @@ public class Application {
             repositoryOrd.save(new Order("Shopping missing items", repositoryCust.findOne(1L)));
             repositoryOrd.save(new Order("Christmas presents Kim Bauer", repositoryCust.findOne(2L)));
 
-            List<Item> items1 = new ArrayList<Item>();
-            items1.add(new Item(repositoryProd.findOne(1L), 1, repositoryOrd.findOne(1L)));
-            items1.add(new Item(repositoryProd.findOne(2L), 2, repositoryOrd.findOne(1L)));
-            items1.add(new Item(repositoryProd.findOne(3L), 5, repositoryOrd.findOne(1L)));
-            items1.add(new Item(repositoryProd.findOne(4L), 6, repositoryOrd.findOne(1L)));
+            repositoryItem.save(new Item(repositoryProd.findOne(1L), 1, repositoryOrd.findOne(1L)));
+            repositoryItem.save(new Item(repositoryProd.findOne(2L), 2, repositoryOrd.findOne(1L)));
+            repositoryItem.save(new Item(repositoryProd.findOne(3L), 5, repositoryOrd.findOne(1L)));
+            repositoryItem.save(new Item(repositoryProd.findOne(4L), 6, repositoryOrd.findOne(1L)));
 
-            repositoryOrd.findOne(1L).items = items1;
+            List<Item> items1 = new ArrayList<Item>();
+            items1.add(repositoryItem.findOne(1L));
+            items1.add(repositoryItem.findOne(2L));
+            items1.add(repositoryItem.findOne(3L));
+            items1.add(repositoryItem.findOne(4L));
+
+            repositoryOrd.findOne(1L).setItems(items1);
+
+            repositoryItem.save(new Item(repositoryProd.findOne(3L), 2, repositoryOrd.findOne(2L)));
 
             List<Item> items2 = new ArrayList<Item>();
-            items2.add(new Item(repositoryProd.findOne(3L), 2, repositoryOrd.findOne(2L)));
+            items2.add(repositoryItem.findOne(5L));
 
             repositoryOrd.findOne(2L).items = items2;
 
+            repositoryItem.save(new Item(repositoryProd.findOne(3L), 3, repositoryOrd.findOne(3L)));
+            repositoryItem.save(new Item(repositoryProd.findOne(4L), 3, repositoryOrd.findOne(3L)));
+
             List<Item> items3 = new ArrayList<Item>();
-            items3.add(new Item(repositoryProd.findOne(3L), 3, repositoryOrd.findOne(3L)));
-            items3.add(new Item(repositoryProd.findOne(4L), 3, repositoryOrd.findOne(3L)));
+            items3.add(repositoryItem.findOne(6L));
+            items3.add(repositoryItem.findOne(7L));
 
             repositoryOrd.findOne(3L).items = items3;
 
