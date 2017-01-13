@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Setter
 @Builder
 @AllArgsConstructor
+@Table(name = "items")
 public class Item {
 
     @Id
@@ -26,7 +27,7 @@ public class Item {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
-    public Order order;
+    private Order order;
 
     public Item(Product product, int quantity, Order order) {
         this.product = product;
