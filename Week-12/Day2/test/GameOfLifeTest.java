@@ -1,6 +1,7 @@
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static junit.framework.TestCase.*;
+
 
 public class GameOfLifeTest {
 
@@ -35,6 +36,18 @@ public class GameOfLifeTest {
                 {".", "*", "*"},
                 {".", "*", "*"}});
         assertFalse(g1.equals(g2));
+    }
+
+    @Test
+    public void testCountAliveNeighbours() throws Exception {
+        Generacio g1 = new Generacio(new String[][]{{".", "*", "*"},
+                {".", "*", "*"},
+                {".", "*", "*"}});
+
+        int[][] excpected = new int[][]{{2, 3, 3},
+                {3, 4, 4},
+                {2, 2, 3}};
+        assertEquals(excpected, g1.countAliveNeighbours());
     }
 
 }

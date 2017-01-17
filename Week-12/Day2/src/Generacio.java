@@ -13,6 +13,10 @@ public class Generacio {
                 {".", "*", "*"}});
     }
 
+    public int[][] countAliveNeighbours() {
+        return null;
+    }
+
     public boolean equals(Object o) {
         Generacio masik = ((Generacio) o);
         for (int i = 0; i < cells.length; i++) {
