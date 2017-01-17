@@ -47,7 +47,19 @@ public class GameOfLifeTest {
         int[][] excpected = new int[][]{{2, 3, 3},
                 {3, 4, 4},
                 {2, 2, 3}};
-        assertEquals(excpected, g1.countAliveNeighbours());
+        assertEquals(excpected, g1.listAliveNeighbours());
     }
 
+    @Test
+    public void testEquals() throws Exception {
+        Cell c1 = new Cell(true);
+        Cell c2 = new Cell(true);
+        assertEquals(true, c1.equals(c2));
+    }
+
+    @Test
+    public void testNotEquals() throws Exception {
+
+        assertEquals(excpected, g1.listAliveNeighbours());
+    }
 }
