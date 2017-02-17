@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class FindLetterApp {
 
     public static void main(String[] args) {
-        System.out.println(findIndexes("pillangolab", 'l').toString());
+        System.out.println(findIndexes("lepegetopillangolabbal", 'l').toString());
     }
 
     public static ArrayList<Integer> findIndexes(String text, char letter) {
