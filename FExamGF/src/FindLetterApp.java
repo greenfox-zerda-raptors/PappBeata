@@ -11,8 +11,7 @@ public class FindLetterApp {
 
     public static ArrayList<Integer> findIndexes(String text, char letter) {
         ArrayList<Integer> indexes = new ArrayList();
-        int length = text.length() - 1;
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < text.length(); i++) {
             if (text.charAt(i) == letter) {
                 indexes.add(i);
             }
