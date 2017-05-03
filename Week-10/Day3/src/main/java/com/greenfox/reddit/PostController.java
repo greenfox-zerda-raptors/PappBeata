@@ -13,7 +13,6 @@ public class PostController {
     @Autowired
     PostServiceImpl postServiceImpl;
 
-
     @RequestMapping(value = {"/", ""})
     public String index(Model model, Pageable pageable) {
         model.addAttribute("posts", postServiceImpl.getAllPosts(pageable));

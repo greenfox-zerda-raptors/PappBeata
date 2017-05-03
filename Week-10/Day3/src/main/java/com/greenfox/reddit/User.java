@@ -1,6 +1,5 @@
 package com.greenfox.reddit;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,9 +14,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer id;
-
-    String firstName;
-    String lastName;
-    String loginName;
-    String password;
+    private String firstName;
+    private String lastName;
+    private String loginName;
+    private String password;
 }
