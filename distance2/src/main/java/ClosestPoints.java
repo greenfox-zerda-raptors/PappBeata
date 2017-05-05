@@ -1,6 +1,6 @@
 import lombok.Setter;
 
 @Setter
-public class ClosestPoints extends SortedPoints {
-    final int maxIndex = 10;
+public class ClosestPoints extends ChosenPoints {
+    final int maxSize = 10;
 }

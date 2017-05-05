@@ -7,17 +7,19 @@ public class Services {
         return distance;
     }
 
-    public boolean isToBeIncludedInClosestPoints(Point point, SortedPoints sortedPoints) {
-        if (point.distanceToReference.get(0) > sortedPoints.getIndexOfMaximumDistancePointInList(0)) {
+    public boolean isToBeIncludedInClosestPoints(Point point, ChosenPoints chosenPoints) {
+        if (point.distanceToReference.get(0) > chosenPoints.getIndexOfMaximumDistancePointInList(0)) {
             return false;
+        } else {
+            return true;
         }
-        return true;
     }
 
-    public boolean isToBeIncludedInFurthestPoints(Point point, SortedPoints sortedPoints) {
-        if (point.distanceToReference.get(1) < sortedPoints.getIndexOfMinimumDistancePointInList(1)) {
+    public boolean isToBeIncludedInFurthestPoints(Point point, ChosenPoints chosenPoints) {
+        if (point.distanceToReference.get(1) < chosenPoints.getIndexOfMinimumDistancePointInList(1)) {
             return false;
+        } else {
+            return true;
         }
-        return true;
     }
 }

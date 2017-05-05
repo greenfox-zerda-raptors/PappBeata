@@ -1,4 +1,4 @@
-public class FurthestPoints extends SortedPoints {
+public class FurthestPoints extends ChosenPoints {
 
-    final int maxIndex = 20;
+    final int maxSize = 20;
 }
