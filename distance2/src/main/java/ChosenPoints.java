@@ -4,13 +4,21 @@ public class ChosenPoints {
 
     Point referencePoint;
     ArrayList<Point> chosenPoints = new ArrayList<>();
-    ArrayList<Double> distancesOfChosenPoints = new ArrayList<>();
     int indexOfMinimumDistancePointInChosenPoints;
     int indexOfMaximumDistancePointInChosenPoints;
+    Double minimumDistanceInChosenPoints;
+    Double maximumDistanceInChosenPoints;
     int maxSize;
-    int indexInPoints;
 
-    public void setIndexOfMinimumDistancePointInChosenPoints(int positionOfReference) {
+    public Double getMinimumDistanceInChosenPoints() {
+        return minimumDistanceInChosenPoints;
+    }
+
+    public Double getMaximumDistanceInChosenPoints() {
+        return maximumDistanceInChosenPoints;
+    }
+
+    public void setIndexOfMinimumDistancePointInChosenPoints() {
         int indexOfMinimumDistance = 0;
         for (Point currPoint : this.chosenPoints) {
             if (getDistanceToReference(currPoint, referencePoint) < getDistanceToReference(this.chosenPoints.get(indexOfMinimumDistance), referencePoint)) {
@@ -18,9 +26,10 @@ public class ChosenPoints {
             }
         }
         indexOfMinimumDistancePointInChosenPoints = indexOfMinimumDistance;
+        minimumDistanceInChosenPoints = getDistanceToReference(this.chosenPoints.get(indexOfMinimumDistance), referencePoint);
     }
 
-    public void setIndexOfMaximumDistancePointInChosenPoints(int positionOfReference) {
+    public void setIndexOfMaximumDistancePointInChosenPoints() {
         int indexOfMaximumDistance = 0;
         for (Point currPoint : this.chosenPoints) {
             if (getDistanceToReference(currPoint, referencePoint) > getDistanceToReference(this.chosenPoints.get(indexOfMaximumDistance), referencePoint)) {
@@ -28,6 +37,7 @@ public class ChosenPoints {
             }
         }
         indexOfMaximumDistancePointInChosenPoints = indexOfMaximumDistance;
+        maximumDistanceInChosenPoints = getDistanceToReference(this.chosenPoints.get(indexOfMaximumDistance), referencePoint);
     }
 
     public ChosenPoints(Point referencePoint, int maxSize) {

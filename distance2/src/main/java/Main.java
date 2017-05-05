@@ -8,6 +8,8 @@ public class Main {
     static ChosenPoints points;
     static ChosenPoints closestPoints;
     static ChosenPoints furthestPoints;
+    static Point pointToBeMovedToLastPosition;
+    static int indexToBeRemoved;
 
     public static void main(String[] args) throws IOException {
         File pointsFile = new File("src/main/resources/points.dat");
@@ -18,8 +20,6 @@ public class Main {
         Point referencePoint2 = new Point(1000, 25);
         closestPoints = new ChosenPoints(referencePoint1, 10);
         furthestPoints = new ChosenPoints(referencePoint2, 20);
-        Point pointToBeMovedToLastPosition;
-        int toBeRemoved;
 
         for (int i = 0; i < bytes.length / 4; i++) {
             int convertedByteX;
@@ -31,43 +31,56 @@ public class Main {
             points.chosenPoints.add(currentPoint);
 
             if (i == closestPoints.maxSize) {
-                closestPoints.setIndexOfMaximumDistancePointInChosenPoints(0);
-                toBeRemoved = closestPoints.indexOfMaximumDistancePointInChosenPoints;
-                pointToBeMovedToLastPosition = new Point(closestPoints.chosenPoints.get(toBeRemoved).xCoordinate, closestPoints.chosenPoints.get(toBeRemoved).yCoordinate);
-                closestPoints.chosenPoints.remove(toBeRemoved);
-                closestPoints.chosenPoints.add(closestPoints.maxSize - 1, pointToBeMovedToLastPosition);
+                moveMaximumItemToTheEnd(closestPoints);
             }
             if (i < closestPoints.maxSize) {
                 closestPoints.chosenPoints.add(currentPoint);
             } else if (isToBeIncludedInClosestPoints(currentPoint, closestPoints)) {
-                closestPoints.chosenPoints.remove(closestPoints.maxSize - 1);
-                closestPoints.chosenPoints.add(currentPoint);
+                moveMaximumItemToTheEnd(closestPoints);
+                changeLastItemToCurrentItem(closestPoints, currentPoint);
             }
             if (i == furthestPoints.maxSize) {
-                furthestPoints.setIndexOfMinimumDistancePointInChosenPoints(1);
-                toBeRemoved = furthestPoints.indexOfMinimumDistancePointInChosenPoints;
-                pointToBeMovedToLastPosition = new Point(furthestPoints.chosenPoints.get(toBeRemoved).xCoordinate, furthestPoints.chosenPoints.get(toBeRemoved).yCoordinate);
-                furthestPoints.chosenPoints.remove(toBeRemoved);
-                furthestPoints.chosenPoints.add(furthestPoints.maxSize - 1, pointToBeMovedToLastPosition);
+                moveMinimumItemToTheEnd(furthestPoints);
             }
             if (i < furthestPoints.maxSize) {
                 furthestPoints.chosenPoints.add(currentPoint);
             } else if (isToBeIncludedInFurthestPoints(currentPoint, furthestPoints)) {
-                furthestPoints.chosenPoints.remove(furthestPoints.maxSize - 1);
-                furthestPoints.chosenPoints.add(currentPoint);
+                moveMinimumItemToTheEnd(furthestPoints);
+                changeLastItemToCurrentItem(furthestPoints, currentPoint);
             }
         }
         System.out.println(bytes.length);
-        System.out.println(points.chosenPoints.get(0).toString());
-        System.out.println(furthestPoints.chosenPoints.toString());
+        System.out.println(points.chosenPoints.get(3).toString());
         System.out.println(closestPoints.chosenPoints.toString());
+        System.out.println(furthestPoints.chosenPoints.toString());
+    }
+
+    public static void moveMaximumItemToTheEnd(ChosenPoints chosenPoints) {
+        chosenPoints.setIndexOfMaximumDistancePointInChosenPoints();
+        indexToBeRemoved = chosenPoints.indexOfMaximumDistancePointInChosenPoints;
+        pointToBeMovedToLastPosition = new Point(chosenPoints.chosenPoints.get(indexToBeRemoved).xCoordinate, chosenPoints.chosenPoints.get(indexToBeRemoved).yCoordinate);
+        chosenPoints.chosenPoints.remove(indexToBeRemoved);
+        chosenPoints.chosenPoints.add(chosenPoints.maxSize - 1, pointToBeMovedToLastPosition);
+    }
+
+    public static void moveMinimumItemToTheEnd(ChosenPoints chosenPoints) {
+        chosenPoints.setIndexOfMinimumDistancePointInChosenPoints();
+        indexToBeRemoved = chosenPoints.indexOfMinimumDistancePointInChosenPoints;
+        pointToBeMovedToLastPosition = new Point(chosenPoints.chosenPoints.get(indexToBeRemoved).xCoordinate, chosenPoints.chosenPoints.get(indexToBeRemoved).yCoordinate);
+        chosenPoints.chosenPoints.remove(indexToBeRemoved);
+        chosenPoints.chosenPoints.add(chosenPoints.maxSize - 1, pointToBeMovedToLastPosition);
+    }
+
+    public static void changeLastItemToCurrentItem(ChosenPoints chosenPoints, Point point) {
+        chosenPoints.chosenPoints.remove(chosenPoints.maxSize - 1);
+        chosenPoints.chosenPoints.add(chosenPoints.maxSize - 1, point);
     }
 
     public static boolean isToBeIncludedInClosestPoints(Point point, ChosenPoints chosenPoints) {
-        return points.getDistanceToReference(point, closestPoints.chosenPoints.get(chosenPoints.maxSize - 1)) <= chosenPoints.indexOfMaximumDistancePointInChosenPoints;
+        return points.getDistanceToReference(point, closestPoints.chosenPoints.get(chosenPoints.maxSize - 1)) <= chosenPoints.getMaximumDistanceInChosenPoints();
     }
 
     public static boolean isToBeIncludedInFurthestPoints(Point point, ChosenPoints chosenPoints) {
-        return points.getDistanceToReference(point, furthestPoints.chosenPoints.get(chosenPoints.maxSize - 1)) >= chosenPoints.indexOfMinimumDistancePointInChosenPoints;
+        return points.getDistanceToReference(point, furthestPoints.chosenPoints.get(chosenPoints.maxSize - 1)) >= chosenPoints.getMinimumDistanceInChosenPoints();
     }
 }
